@@ -1,0 +1,2902 @@
+[
+  {
+    "run": 0,
+    "naive": {
+      "density": {
+        "density_min_raw": 5.269137011816496e-63,
+        "density_below_floor": 7,
+        "inverse_weight_at_cap": 7,
+        "density_median": 1.0392801925651054
+      },
+      "residual_std": 0.6593581615837814,
+      "training_mean_price": 0.6812641880153871
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 682,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2576848369750073
+      },
+      "density": {
+        "density_min_raw": 5.269137011816496e-63,
+        "density_below_floor": 7,
+        "inverse_weight_at_cap": 7,
+        "density_median": 1.0392801925651054
+      },
+      "residual_std": 0.6104511739646538,
+      "training_mean_price": 0.8195383505529042
+    }
+  },
+  {
+    "run": 1,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.005820454486678649,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0175828299331426
+      },
+      "residual_std": 0.6887046814078903,
+      "training_mean_price": 0.5861893116805621
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 693,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5456414604535627
+      },
+      "density": {
+        "density_min_raw": 0.005820454486678649,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0175828299331426
+      },
+      "residual_std": 0.6468521101004333,
+      "training_mean_price": 0.8240901596246382
+    }
+  },
+  {
+    "run": 2,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.002674009432415712,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0396564440532923
+      },
+      "residual_std": 0.6874159235788038,
+      "training_mean_price": 0.5253931263282536
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 675,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.546349122056258
+      },
+      "density": {
+        "density_min_raw": 0.002674009432415712,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0396564440532923
+      },
+      "residual_std": 0.6510460341828961,
+      "training_mean_price": 0.8901011558225307
+    }
+  },
+  {
+    "run": 3,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0018034349639347632,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0360534045571308
+      },
+      "residual_std": 0.6515444545090882,
+      "training_mean_price": 0.687734207102387
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 703,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2575215783597327
+      },
+      "density": {
+        "density_min_raw": 0.0018034349639347632,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0360534045571308
+      },
+      "residual_std": 0.604553707866117,
+      "training_mean_price": 0.8711750270912278
+    }
+  },
+  {
+    "run": 4,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0015417745483708371,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0722374929649443
+      },
+      "residual_std": 0.6594522934836382,
+      "training_mean_price": 0.6626472967903236
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 700,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2805884477486695
+      },
+      "density": {
+        "density_min_raw": 0.0015417745483708371,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0722374929649443
+      },
+      "residual_std": 0.6125096502934377,
+      "training_mean_price": 0.7637789564052924
+    }
+  },
+  {
+    "run": 5,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.002537602776597315,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.048495486747275
+      },
+      "residual_std": 0.6902512872064375,
+      "training_mean_price": 0.7773984061134561
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 693,
+        "small_denominators": 0,
+        "tail_cap": 10,
+        "mean_estimated_excess": 3.844895576704963
+      },
+      "density": {
+        "density_min_raw": 0.002537602776597315,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.048495486747275
+      },
+      "residual_std": 0.6263466866230815,
+      "training_mean_price": 0.7010055882009233
+    }
+  },
+  {
+    "run": 6,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.011938491100358087,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0600640769695318
+      },
+      "residual_std": 0.6730137343661127,
+      "training_mean_price": 0.6995079773576376
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 721,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.6272703063684486
+      },
+      "density": {
+        "density_min_raw": 0.011938491100358087,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0600640769695318
+      },
+      "residual_std": 0.6307963121665987,
+      "training_mean_price": 0.7153996012532927
+    }
+  },
+  {
+    "run": 7,
+    "naive": {
+      "density": {
+        "density_min_raw": 9.884834660714306e-10,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0144642223377751
+      },
+      "residual_std": 0.6588305904396067,
+      "training_mean_price": 0.678111538177889
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 640,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.19930273534884
+      },
+      "density": {
+        "density_min_raw": 9.884834660714306e-10,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0144642223377751
+      },
+      "residual_std": 0.6145490989692768,
+      "training_mean_price": 0.7376541014585605
+    }
+  },
+  {
+    "run": 8,
+    "naive": {
+      "density": {
+        "density_min_raw": 4.680534059282803e-28,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.061137744302989
+      },
+      "residual_std": 0.6857731893616436,
+      "training_mean_price": 0.6698451299257941
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 686,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5318317692346524
+      },
+      "density": {
+        "density_min_raw": 4.680534059282803e-28,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.061137744302989
+      },
+      "residual_std": 0.6570205007204398,
+      "training_mean_price": 0.8129116605626762
+    }
+  },
+  {
+    "run": 9,
+    "naive": {
+      "density": {
+        "density_min_raw": 9.009283941340172e-07,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0520312324552654
+      },
+      "residual_std": 0.6821342740183584,
+      "training_mean_price": 0.5715748523202238
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 695,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.290060062839068
+      },
+      "density": {
+        "density_min_raw": 9.009283941340172e-07,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0520312324552654
+      },
+      "residual_std": 0.6355044755890582,
+      "training_mean_price": 0.8850853140085589
+    }
+  },
+  {
+    "run": 10,
+    "naive": {
+      "density": {
+        "density_min_raw": 2.376462121543338e-13,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0146298227077524
+      },
+      "residual_std": 0.7011343205226478,
+      "training_mean_price": 0.6840232912605645
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 694,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2424398941470693
+      },
+      "density": {
+        "density_min_raw": 2.376462121543338e-13,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0146298227077524
+      },
+      "residual_std": 0.6489877994387337,
+      "training_mean_price": 0.7158313800091064
+    }
+  },
+  {
+    "run": 11,
+    "naive": {
+      "density": {
+        "density_min_raw": 5.251981981129619e-31,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.034707230249722
+      },
+      "residual_std": 0.6679803479538,
+      "training_mean_price": 0.4531509009855927
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 707,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2070766060253626
+      },
+      "density": {
+        "density_min_raw": 5.251981981129619e-31,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.034707230249722
+      },
+      "residual_std": 0.6183129883601652,
+      "training_mean_price": 0.6478848714089865
+    }
+  },
+  {
+    "run": 12,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.004907713180879887,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0434574618685026
+      },
+      "residual_std": 0.6928297468968243,
+      "training_mean_price": 0.8456330100012781
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 692,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.329341830939719
+      },
+      "density": {
+        "density_min_raw": 0.004907713180879887,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0434574618685026
+      },
+      "residual_std": 0.6460840560752168,
+      "training_mean_price": 0.7384901154329767
+    }
+  },
+  {
+    "run": 13,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.000239986716338487,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.096507627931023
+      },
+      "residual_std": 0.6588075717211946,
+      "training_mean_price": 0.618451246282906
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 717,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3038509335506743
+      },
+      "density": {
+        "density_min_raw": 0.000239986716338487,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.096507627931023
+      },
+      "residual_std": 0.6038780046877791,
+      "training_mean_price": 0.6412064951316688
+    }
+  },
+  {
+    "run": 14,
+    "naive": {
+      "density": {
+        "density_min_raw": 7.20367969160244e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0845796190717534
+      },
+      "residual_std": 0.6758464480549353,
+      "training_mean_price": 0.5295785066146995
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 710,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3064362905419586
+      },
+      "density": {
+        "density_min_raw": 7.20367969160244e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0845796190717534
+      },
+      "residual_std": 0.623968184274843,
+      "training_mean_price": 0.786772291907246
+    }
+  },
+  {
+    "run": 15,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0011131954684658776,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0546673550433063
+      },
+      "residual_std": 0.6795794439892244,
+      "training_mean_price": 0.6497373184620481
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 666,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5148728353935663
+      },
+      "density": {
+        "density_min_raw": 0.0011131954684658776,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0546673550433063
+      },
+      "residual_std": 0.6438900670732988,
+      "training_mean_price": 0.5396196052865224
+    }
+  },
+  {
+    "run": 16,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.038536807306830095,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0451795952866005
+      },
+      "residual_std": 0.6798206796520444,
+      "training_mean_price": 0.6967999741733274
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 697,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.243844213498932
+      },
+      "density": {
+        "density_min_raw": 0.038536807306830095,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0451795952866005
+      },
+      "residual_std": 0.628890194491869,
+      "training_mean_price": 0.850769512114085
+    }
+  },
+  {
+    "run": 17,
+    "naive": {
+      "density": {
+        "density_min_raw": 2.0310199881112626e-06,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0766817528469796
+      },
+      "residual_std": 0.6608383351432652,
+      "training_mean_price": 0.5324784795035725
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 666,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5644645994917425
+      },
+      "density": {
+        "density_min_raw": 2.0310199881112626e-06,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0766817528469796
+      },
+      "residual_std": 0.6235875611205227,
+      "training_mean_price": 0.635627483693055
+    }
+  },
+  {
+    "run": 18,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0027536524835111787,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0324502917691096
+      },
+      "residual_std": 0.6963664575124275,
+      "training_mean_price": 0.7514317930175204
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 688,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2830352758677446
+      },
+      "density": {
+        "density_min_raw": 0.0027536524835111787,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0324502917691096
+      },
+      "residual_std": 0.6478640011001096,
+      "training_mean_price": 0.6296760839760948
+    }
+  },
+  {
+    "run": 19,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.002669148265106561,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0446611134610206
+      },
+      "residual_std": 0.672569887597495,
+      "training_mean_price": 0.5825295193564975
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 688,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2747928829250275
+      },
+      "density": {
+        "density_min_raw": 0.002669148265106561,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0446611134610206
+      },
+      "residual_std": 0.6245483120315592,
+      "training_mean_price": 0.7244432131729023
+    }
+  },
+  {
+    "run": 20,
+    "naive": {
+      "density": {
+        "density_min_raw": 1.2596670196877954e-09,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0349470166371635
+      },
+      "residual_std": 0.6645155962531555,
+      "training_mean_price": 0.6541127991541639
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 689,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.237141089873189
+      },
+      "density": {
+        "density_min_raw": 1.2596670196877954e-09,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0349470166371635
+      },
+      "residual_std": 0.6207845581070957,
+      "training_mean_price": 0.7728359204304937
+    }
+  },
+  {
+    "run": 21,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0683177610854872,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0372829787205369
+      },
+      "residual_std": 0.6751487561162817,
+      "training_mean_price": 0.6444913474050459
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 688,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3494329041469766
+      },
+      "density": {
+        "density_min_raw": 0.0683177610854872,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0372829787205369
+      },
+      "residual_std": 0.6231932984397532,
+      "training_mean_price": 0.5599108699109643
+    }
+  },
+  {
+    "run": 22,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.004917812852173469,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0372318585734042
+      },
+      "residual_std": 0.6646779835695249,
+      "training_mean_price": 0.837720413345383
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 720,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.631833106498576
+      },
+      "density": {
+        "density_min_raw": 0.004917812852173469,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0372318585734042
+      },
+      "residual_std": 0.6290763192423591,
+      "training_mean_price": 0.8370521030820981
+    }
+  },
+  {
+    "run": 23,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0011695020204287457,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0391784999166567
+      },
+      "residual_std": 0.6762406231682616,
+      "training_mean_price": 0.6290302990730327
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 690,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.259349365416133
+      },
+      "density": {
+        "density_min_raw": 0.0011695020204287457,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0391784999166567
+      },
+      "residual_std": 0.6279788961424472,
+      "training_mean_price": 0.8193558543256861
+    }
+  },
+  {
+    "run": 24,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00562803022790931,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.036385551544015
+      },
+      "residual_std": 0.7056427575547798,
+      "training_mean_price": 0.6591382245817455
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 646,
+        "small_denominators": 0,
+        "tail_cap": 10,
+        "mean_estimated_excess": 3.9157579672809626
+      },
+      "density": {
+        "density_min_raw": 0.00562803022790931,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.036385551544015
+      },
+      "residual_std": 0.6439575224258163,
+      "training_mean_price": 0.9153994985358934
+    }
+  },
+  {
+    "run": 25,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.007986236559731782,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.075431905667441
+      },
+      "residual_std": 0.6630584426242571,
+      "training_mean_price": 0.65879579884937
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 698,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2668472370596477
+      },
+      "density": {
+        "density_min_raw": 0.007986236559731782,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.075431905667441
+      },
+      "residual_std": 0.6136427434897054,
+      "training_mean_price": 0.7929451359207034
+    }
+  },
+  {
+    "run": 26,
+    "naive": {
+      "density": {
+        "density_min_raw": 3.8464811690635143e-11,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.044811448842426
+      },
+      "residual_std": 0.681593904078653,
+      "training_mean_price": 0.6085299990743414
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 695,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.225235956976569
+      },
+      "density": {
+        "density_min_raw": 3.8464811690635143e-11,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.044811448842426
+      },
+      "residual_std": 0.6310589960872331,
+      "training_mean_price": 0.6542384152705826
+    }
+  },
+  {
+    "run": 27,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.01709955621138127,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.048181078677302
+      },
+      "residual_std": 0.6911425785412503,
+      "training_mean_price": 0.670021055838746
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 685,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.303030550942454
+      },
+      "density": {
+        "density_min_raw": 0.01709955621138127,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.048181078677302
+      },
+      "residual_std": 0.6442892074072998,
+      "training_mean_price": 0.6734649461668395
+    }
+  },
+  {
+    "run": 28,
+    "naive": {
+      "density": {
+        "density_min_raw": 3.7498238468062025e-06,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0370438691578645
+      },
+      "residual_std": 0.671174413331275,
+      "training_mean_price": 0.6655510477594621
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 720,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2415609832712873
+      },
+      "density": {
+        "density_min_raw": 3.7498238468062025e-06,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0370438691578645
+      },
+      "residual_std": 0.6162128585309051,
+      "training_mean_price": 0.6142201261960252
+    }
+  },
+  {
+    "run": 29,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0063351801888667245,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0430455601832764
+      },
+      "residual_std": 0.671080558413394,
+      "training_mean_price": 0.653473651915035
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 741,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2711802686347498
+      },
+      "density": {
+        "density_min_raw": 0.0063351801888667245,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0430455601832764
+      },
+      "residual_std": 0.6265565561832485,
+      "training_mean_price": 0.7117267868908951
+    }
+  },
+  {
+    "run": 30,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0024208061805926187,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.070289334614743
+      },
+      "residual_std": 0.646812685114677,
+      "training_mean_price": 0.586215250117397
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 742,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3091967007758725
+      },
+      "density": {
+        "density_min_raw": 0.0024208061805926187,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.070289334614743
+      },
+      "residual_std": 0.59968322015371,
+      "training_mean_price": 0.7826685770554802
+    }
+  },
+  {
+    "run": 31,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0470454219859358,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0685129123567727
+      },
+      "residual_std": 0.667775404918963,
+      "training_mean_price": 0.8506597459399832
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 720,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.280287951512654
+      },
+      "density": {
+        "density_min_raw": 0.0470454219859358,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0685129123567727
+      },
+      "residual_std": 0.6254760695295918,
+      "training_mean_price": 0.6588631877145897
+    }
+  },
+  {
+    "run": 32,
+    "naive": {
+      "density": {
+        "density_min_raw": 4.844581073854889e-14,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0153898783940392
+      },
+      "residual_std": 0.6781592013609936,
+      "training_mean_price": 0.7582342064069794
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 716,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2654925726904307
+      },
+      "density": {
+        "density_min_raw": 4.844581073854889e-14,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0153898783940392
+      },
+      "residual_std": 0.6324704998995193,
+      "training_mean_price": 0.6591387051704884
+    }
+  },
+  {
+    "run": 33,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0014305204592850685,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0383386788844648
+      },
+      "residual_std": 0.6829598945260953,
+      "training_mean_price": 0.6650559381993337
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 676,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2151385696612316
+      },
+      "density": {
+        "density_min_raw": 0.0014305204592850685,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0383386788844648
+      },
+      "residual_std": 0.640781198466087,
+      "training_mean_price": 0.568535156988241
+    }
+  },
+  {
+    "run": 34,
+    "naive": {
+      "density": {
+        "density_min_raw": 6.375228303046917e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0323334818072663
+      },
+      "residual_std": 0.6759276957181342,
+      "training_mean_price": 0.9187130839844276
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 677,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2351467956231965
+      },
+      "density": {
+        "density_min_raw": 6.375228303046917e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0323334818072663
+      },
+      "residual_std": 0.6316444337642791,
+      "training_mean_price": 0.8154464138073281
+    }
+  },
+  {
+    "run": 35,
+    "naive": {
+      "density": {
+        "density_min_raw": 1.6347722465373423e-19,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.070564719912725
+      },
+      "residual_std": 0.6637251252430447,
+      "training_mean_price": 0.6475476026327194
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 737,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2846624427105056
+      },
+      "density": {
+        "density_min_raw": 1.6347722465373423e-19,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.070564719912725
+      },
+      "residual_std": 0.6140348881737312,
+      "training_mean_price": 0.6716269195592686
+    }
+  },
+  {
+    "run": 36,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.004886939926202075,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0678112897724157
+      },
+      "residual_std": 0.6591571216184485,
+      "training_mean_price": 0.6524562673307626
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 676,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.193431938292683
+      },
+      "density": {
+        "density_min_raw": 0.004886939926202075,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0678112897724157
+      },
+      "residual_std": 0.61689296220132,
+      "training_mean_price": 0.656342093391486
+    }
+  },
+  {
+    "run": 37,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00013367244464146535,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0499529128445282
+      },
+      "residual_std": 0.6836879618136237,
+      "training_mean_price": 0.5949742523203982
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 694,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.569592006260577
+      },
+      "density": {
+        "density_min_raw": 0.00013367244464146535,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0499529128445282
+      },
+      "residual_std": 0.6436382275201897,
+      "training_mean_price": 0.7570054583191655
+    }
+  },
+  {
+    "run": 38,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0022092634712906393,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0592707391940723
+      },
+      "residual_std": 0.6845687404723226,
+      "training_mean_price": 0.5931676208688675
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 709,
+        "small_denominators": 0,
+        "tail_cap": 10,
+        "mean_estimated_excess": 4.009765736783301
+      },
+      "density": {
+        "density_min_raw": 0.0022092634712906393,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0592707391940723
+      },
+      "residual_std": 0.6325919687639473,
+      "training_mean_price": 0.5917656182101689
+    }
+  },
+  {
+    "run": 39,
+    "naive": {
+      "density": {
+        "density_min_raw": 2.1928660320318546e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0409175836039155
+      },
+      "residual_std": 0.6911641242411846,
+      "training_mean_price": 0.6413507284338436
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 696,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2881749749131637
+      },
+      "density": {
+        "density_min_raw": 2.1928660320318546e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0409175836039155
+      },
+      "residual_std": 0.6474859359687327,
+      "training_mean_price": 0.7307753943303109
+    }
+  },
+  {
+    "run": 40,
+    "naive": {
+      "density": {
+        "density_min_raw": 4.909763164989571e-09,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0617127241616626
+      },
+      "residual_std": 0.6835976218780575,
+      "training_mean_price": 0.6113073719686059
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 694,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2619093534433996
+      },
+      "density": {
+        "density_min_raw": 4.909763164989571e-09,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0617127241616626
+      },
+      "residual_std": 0.6321277736936894,
+      "training_mean_price": 0.7404613383845843
+    }
+  },
+  {
+    "run": 41,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00014198615657721393,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0758151281774602
+      },
+      "residual_std": 0.6711834966544589,
+      "training_mean_price": 0.6333655262297868
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 718,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.228894911982638
+      },
+      "density": {
+        "density_min_raw": 0.00014198615657721393,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0758151281774602
+      },
+      "residual_std": 0.6239676318675917,
+      "training_mean_price": 0.7381814686636591
+    }
+  },
+  {
+    "run": 42,
+    "naive": {
+      "density": {
+        "density_min_raw": 7.556169371574668e-11,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.008893328137772
+      },
+      "residual_std": 0.6824041718478205,
+      "training_mean_price": 0.7149611377211886
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 698,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2355742677471695
+      },
+      "density": {
+        "density_min_raw": 7.556169371574668e-11,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.008893328137772
+      },
+      "residual_std": 0.6374430068892833,
+      "training_mean_price": 0.8271181025526513
+    }
+  },
+  {
+    "run": 43,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.001638064223840906,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0243785903522085
+      },
+      "residual_std": 0.671989273124216,
+      "training_mean_price": 0.6816218665797364
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 691,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.368335538029812
+      },
+      "density": {
+        "density_min_raw": 0.001638064223840906,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0243785903522085
+      },
+      "residual_std": 0.6251744987560114,
+      "training_mean_price": 0.6997109986741057
+    }
+  },
+  {
+    "run": 44,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.007808384709694447,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0465550084475277
+      },
+      "residual_std": 0.6595692719382903,
+      "training_mean_price": 0.7525895171181942
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 704,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.323079476042048
+      },
+      "density": {
+        "density_min_raw": 0.007808384709694447,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0465550084475277
+      },
+      "residual_std": 0.6135867805201866,
+      "training_mean_price": 0.8584039829535611
+    }
+  },
+  {
+    "run": 45,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.011726403160564971,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.052850362972143
+      },
+      "residual_std": 0.647531312169805,
+      "training_mean_price": 0.7857264906615474
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 702,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.301660297693817
+      },
+      "density": {
+        "density_min_raw": 0.011726403160564971,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.052850362972143
+      },
+      "residual_std": 0.6035028699829678,
+      "training_mean_price": 0.5899944872163915
+    }
+  },
+  {
+    "run": 46,
+    "naive": {
+      "density": {
+        "density_min_raw": 8.396544160583622e-09,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0725878953788974
+      },
+      "residual_std": 0.6671713569759077,
+      "training_mean_price": 0.7058871647962695
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 711,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.584493091280554
+      },
+      "density": {
+        "density_min_raw": 8.396544160583622e-09,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0725878953788974
+      },
+      "residual_std": 0.6271870596794978,
+      "training_mean_price": 0.7475707793065847
+    }
+  },
+  {
+    "run": 47,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.03940468075711743,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0423170096505945
+      },
+      "residual_std": 0.6676566829687077,
+      "training_mean_price": 0.6673450634346075
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 692,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2647506631751253
+      },
+      "density": {
+        "density_min_raw": 0.03940468075711743,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0423170096505945
+      },
+      "residual_std": 0.6154631450304733,
+      "training_mean_price": 0.7049819414702746
+    }
+  },
+  {
+    "run": 48,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0003693275883851727,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0387215358078072
+      },
+      "residual_std": 0.6881009579419725,
+      "training_mean_price": 0.6985836529156946
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 712,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.214185348750433
+      },
+      "density": {
+        "density_min_raw": 0.0003693275883851727,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0387215358078072
+      },
+      "residual_std": 0.6442514313704488,
+      "training_mean_price": 0.658382901507199
+    }
+  },
+  {
+    "run": 49,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00011343165574137559,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0582838390186118
+      },
+      "residual_std": 0.6626986120651768,
+      "training_mean_price": 0.6034355701882587
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 688,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.234341101756853
+      },
+      "density": {
+        "density_min_raw": 0.00011343165574137559,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0582838390186118
+      },
+      "residual_std": 0.6184061883705727,
+      "training_mean_price": 0.9471183506046873
+    }
+  },
+  {
+    "run": 50,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.004019120335834433,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0412519575682249
+      },
+      "residual_std": 0.6785596815126751,
+      "training_mean_price": 0.7088890706797519
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 670,
+        "small_denominators": 0,
+        "tail_cap": 10,
+        "mean_estimated_excess": 4.022327148349072
+      },
+      "density": {
+        "density_min_raw": 0.004019120335834433,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0412519575682249
+      },
+      "residual_std": 0.6222388078967087,
+      "training_mean_price": 0.7521950070980447
+    }
+  },
+  {
+    "run": 51,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0026075035462211657,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0854058215174542
+      },
+      "residual_std": 0.6730960231331957,
+      "training_mean_price": 0.5798282907293054
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 666,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.316687964016236
+      },
+      "density": {
+        "density_min_raw": 0.0026075035462211657,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0854058215174542
+      },
+      "residual_std": 0.6216358548031341,
+      "training_mean_price": 0.7870654785173875
+    }
+  },
+  {
+    "run": 52,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.021905862645257033,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.068772425650988
+      },
+      "residual_std": 0.6344740991249709,
+      "training_mean_price": 0.7843859154279929
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 667,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.1307155967535403
+      },
+      "density": {
+        "density_min_raw": 0.021905862645257033,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.068772425650988
+      },
+      "residual_std": 0.5938434296226056,
+      "training_mean_price": 0.7865920339253349
+    }
+  },
+  {
+    "run": 53,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0013161177794310125,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.056958276288081
+      },
+      "residual_std": 0.6703896088281593,
+      "training_mean_price": 0.6896019815567525
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 695,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2558082222993603
+      },
+      "density": {
+        "density_min_raw": 0.0013161177794310125,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.056958276288081
+      },
+      "residual_std": 0.6256517177080814,
+      "training_mean_price": 0.6120233475015926
+    }
+  },
+  {
+    "run": 54,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0009723747344539896,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 0.9871737369165756
+      },
+      "residual_std": 0.6658781890782747,
+      "training_mean_price": 0.6047334032478165
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 721,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.308287183945059
+      },
+      "density": {
+        "density_min_raw": 0.0009723747344539896,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 0.9871737369165756
+      },
+      "residual_std": 0.6332019187988369,
+      "training_mean_price": 0.6688229878802888
+    }
+  },
+  {
+    "run": 55,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.03115003964901228,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0426831408954889
+      },
+      "residual_std": 0.6850382600840139,
+      "training_mean_price": 0.5590451931713121
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 694,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5783390660972585
+      },
+      "density": {
+        "density_min_raw": 0.03115003964901228,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0426831408954889
+      },
+      "residual_std": 0.6564988069674409,
+      "training_mean_price": 0.572434462059266
+    }
+  },
+  {
+    "run": 56,
+    "naive": {
+      "density": {
+        "density_min_raw": 2.690287722453178e-10,
+        "density_below_floor": 8,
+        "inverse_weight_at_cap": 8,
+        "density_median": 1.0318119222339197
+      },
+      "residual_std": 0.6476331909050489,
+      "training_mean_price": 0.6413482746739279
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 723,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.277036159881824
+      },
+      "density": {
+        "density_min_raw": 2.690287722453178e-10,
+        "density_below_floor": 8,
+        "inverse_weight_at_cap": 8,
+        "density_median": 1.0318119222339197
+      },
+      "residual_std": 0.6051765179710105,
+      "training_mean_price": 0.887146082554539
+    }
+  },
+  {
+    "run": 57,
+    "naive": {
+      "density": {
+        "density_min_raw": 1.9731037012157969e-10,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.0472773558325716
+      },
+      "residual_std": 0.6546341930175397,
+      "training_mean_price": 0.7510069144665601
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 664,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.225675867509936
+      },
+      "density": {
+        "density_min_raw": 1.9731037012157969e-10,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.0472773558325716
+      },
+      "residual_std": 0.61786058379091,
+      "training_mean_price": 0.7263210204380783
+    }
+  },
+  {
+    "run": 58,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.04797285915915993,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0175046631471498
+      },
+      "residual_std": 0.6523688434147782,
+      "training_mean_price": 0.5264629416380125
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 729,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5677707648441657
+      },
+      "density": {
+        "density_min_raw": 0.04797285915915993,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0175046631471498
+      },
+      "residual_std": 0.6130638593104291,
+      "training_mean_price": 0.8085592082620413
+    }
+  },
+  {
+    "run": 59,
+    "naive": {
+      "density": {
+        "density_min_raw": 3.177777383317395e-05,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0335772905678244
+      },
+      "residual_std": 0.6786739659461616,
+      "training_mean_price": 0.5540752361356586
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 698,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2663694027830577
+      },
+      "density": {
+        "density_min_raw": 3.177777383317395e-05,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0335772905678244
+      },
+      "residual_std": 0.629525809117494,
+      "training_mean_price": 0.7121475696058165
+    }
+  },
+  {
+    "run": 60,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.004283465386947936,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.061227683922911
+      },
+      "residual_std": 0.6747965412762595,
+      "training_mean_price": 0.6070618994946917
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 709,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.6424962273469506
+      },
+      "density": {
+        "density_min_raw": 0.004283465386947936,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.061227683922911
+      },
+      "residual_std": 0.6469015564134897,
+      "training_mean_price": 0.7764399725549761
+    }
+  },
+  {
+    "run": 61,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0016993921224405122,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.055609681346891
+      },
+      "residual_std": 0.6816642901360865,
+      "training_mean_price": 0.575496145293185
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 659,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.30848274295827
+      },
+      "density": {
+        "density_min_raw": 0.0016993921224405122,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.055609681346891
+      },
+      "residual_std": 0.637237793335207,
+      "training_mean_price": 0.657550403038628
+    }
+  },
+  {
+    "run": 62,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.02279821652969216,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.013551832977459
+      },
+      "residual_std": 0.693278212740897,
+      "training_mean_price": 0.6915898673237131
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 681,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2255421818404124
+      },
+      "density": {
+        "density_min_raw": 0.02279821652969216,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.013551832977459
+      },
+      "residual_std": 0.6489189795245993,
+      "training_mean_price": 0.7226107091894866
+    }
+  },
+  {
+    "run": 63,
+    "naive": {
+      "density": {
+        "density_min_raw": 1.4201638685360986e-12,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0421222532526084
+      },
+      "residual_std": 0.6803814989638712,
+      "training_mean_price": 0.6530961015703979
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 709,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.281025397120167
+      },
+      "density": {
+        "density_min_raw": 1.4201638685360986e-12,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0421222532526084
+      },
+      "residual_std": 0.6311143144900558,
+      "training_mean_price": 0.9500061644586765
+    }
+  },
+  {
+    "run": 64,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.02212635661697426,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.015985295544548
+      },
+      "residual_std": 0.7069245262246147,
+      "training_mean_price": 0.7340248337745897
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 702,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2881926844389997
+      },
+      "density": {
+        "density_min_raw": 0.02212635661697426,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.015985295544548
+      },
+      "residual_std": 0.6571650764826258,
+      "training_mean_price": 0.7228572735921315
+    }
+  },
+  {
+    "run": 65,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00016679411823719738,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0086694888178307
+      },
+      "residual_std": 0.6842444469855861,
+      "training_mean_price": 0.7109906754574743
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 742,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.318172739515274
+      },
+      "density": {
+        "density_min_raw": 0.00016679411823719738,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0086694888178307
+      },
+      "residual_std": 0.63097980115246,
+      "training_mean_price": 0.7441117405309173
+    }
+  },
+  {
+    "run": 66,
+    "naive": {
+      "density": {
+        "density_min_raw": 1.8210470774163025e-06,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0242986429018863
+      },
+      "residual_std": 0.6812731164285881,
+      "training_mean_price": 0.49712068751563393
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 691,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5994831808491
+      },
+      "density": {
+        "density_min_raw": 1.8210470774163025e-06,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0242986429018863
+      },
+      "residual_std": 0.6462771108258447,
+      "training_mean_price": 0.5968439459054092
+    }
+  },
+  {
+    "run": 67,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00014629182800107463,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0107181702050043
+      },
+      "residual_std": 0.6818674965190025,
+      "training_mean_price": 0.6074185812745693
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 711,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.6171842349055168
+      },
+      "density": {
+        "density_min_raw": 0.00014629182800107463,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0107181702050043
+      },
+      "residual_std": 0.6437111462208045,
+      "training_mean_price": 0.8948078111273187
+    }
+  },
+  {
+    "run": 68,
+    "naive": {
+      "density": {
+        "density_min_raw": 1.800684165260919e-20,
+        "density_below_floor": 6,
+        "inverse_weight_at_cap": 6,
+        "density_median": 1.042165039762995
+      },
+      "residual_std": 0.6721007978045747,
+      "training_mean_price": 0.6167572808343426
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 721,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.22703414744146
+      },
+      "density": {
+        "density_min_raw": 1.800684165260919e-20,
+        "density_below_floor": 6,
+        "inverse_weight_at_cap": 6,
+        "density_median": 1.042165039762995
+      },
+      "residual_std": 0.6233816821386484,
+      "training_mean_price": 0.9328084409113008
+    }
+  },
+  {
+    "run": 69,
+    "naive": {
+      "density": {
+        "density_min_raw": 4.436643375775526e-11,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.0437009126229708
+      },
+      "residual_std": 0.6579732552617387,
+      "training_mean_price": 0.8354886684898191
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 681,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2378400276078505
+      },
+      "density": {
+        "density_min_raw": 4.436643375775526e-11,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.0437009126229708
+      },
+      "residual_std": 0.6101382299852232,
+      "training_mean_price": 0.6699530768556156
+    }
+  },
+  {
+    "run": 70,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.004097175649851839,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.08541347064609
+      },
+      "residual_std": 0.6760223239650235,
+      "training_mean_price": 0.872008698182666
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 705,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.599348056693413
+      },
+      "density": {
+        "density_min_raw": 0.004097175649851839,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.08541347064609
+      },
+      "residual_std": 0.636861566490987,
+      "training_mean_price": 0.8762152287707278
+    }
+  },
+  {
+    "run": 71,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.002146656855902889,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.081334520005066
+      },
+      "residual_std": 0.6859361609419299,
+      "training_mean_price": 0.5803628869958672
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 696,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.6100341964671805
+      },
+      "density": {
+        "density_min_raw": 0.002146656855902889,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.081334520005066
+      },
+      "residual_std": 0.6515256605427886,
+      "training_mean_price": 0.6219699320587931
+    }
+  },
+  {
+    "run": 72,
+    "naive": {
+      "density": {
+        "density_min_raw": 4.739446135829238e-07,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0358872979012066
+      },
+      "residual_std": 0.662594537576445,
+      "training_mean_price": 0.7240421402940035
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 690,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2688159258847325
+      },
+      "density": {
+        "density_min_raw": 4.739446135829238e-07,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0358872979012066
+      },
+      "residual_std": 0.6092047382934639,
+      "training_mean_price": 0.6419466861636165
+    }
+  },
+  {
+    "run": 73,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0013176255103564505,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.05300186912823
+      },
+      "residual_std": 0.6632022847889149,
+      "training_mean_price": 0.6667405417119926
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 704,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.6133016540764022
+      },
+      "density": {
+        "density_min_raw": 0.0013176255103564505,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.05300186912823
+      },
+      "residual_std": 0.6268453094080507,
+      "training_mean_price": 0.6988092296652331
+    }
+  },
+  {
+    "run": 74,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.03237352581914065,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0398417092103232
+      },
+      "residual_std": 0.6675220526769443,
+      "training_mean_price": 0.6499365645258584
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 687,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2525207537828718
+      },
+      "density": {
+        "density_min_raw": 0.03237352581914065,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0398417092103232
+      },
+      "residual_std": 0.6193768852449659,
+      "training_mean_price": 0.8840230401173642
+    }
+  },
+  {
+    "run": 75,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.03224548485624505,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0505212549110254
+      },
+      "residual_std": 0.6613584109253883,
+      "training_mean_price": 0.5391339816851577
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 694,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.280838392276079
+      },
+      "density": {
+        "density_min_raw": 0.03224548485624505,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.0505212549110254
+      },
+      "residual_std": 0.611437247724103,
+      "training_mean_price": 0.5581863558885158
+    }
+  },
+  {
+    "run": 76,
+    "naive": {
+      "density": {
+        "density_min_raw": 6.627389603179111e-21,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0526379043833802
+      },
+      "residual_std": 0.6757013699630661,
+      "training_mean_price": 0.6348570484142402
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 720,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.380172782553277
+      },
+      "density": {
+        "density_min_raw": 6.627389603179111e-21,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0526379043833802
+      },
+      "residual_std": 0.6242093262876988,
+      "training_mean_price": 0.6779723666244777
+    }
+  },
+  {
+    "run": 77,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0031412899346098745,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0381845347941503
+      },
+      "residual_std": 0.6757509396223618,
+      "training_mean_price": 0.6851776214958163
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 734,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.335974729162318
+      },
+      "density": {
+        "density_min_raw": 0.0031412899346098745,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0381845347941503
+      },
+      "residual_std": 0.6249317118909732,
+      "training_mean_price": 0.623519735704851
+    }
+  },
+  {
+    "run": 78,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0012783213380372891,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0517654068253202
+      },
+      "residual_std": 0.6699646165215156,
+      "training_mean_price": 0.7751211614111004
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 699,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.301441961036863
+      },
+      "density": {
+        "density_min_raw": 0.0012783213380372891,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0517654068253202
+      },
+      "residual_std": 0.6215942563434225,
+      "training_mean_price": 0.7386446462044315
+    }
+  },
+  {
+    "run": 79,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0001856831352111658,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0560477028699005
+      },
+      "residual_std": 0.6789679087533921,
+      "training_mean_price": 0.5336065848177516
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 737,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3627265234693806
+      },
+      "density": {
+        "density_min_raw": 0.0001856831352111658,
+        "density_below_floor": 4,
+        "inverse_weight_at_cap": 4,
+        "density_median": 1.0560477028699005
+      },
+      "residual_std": 0.6361358521665149,
+      "training_mean_price": 0.5770279411492886
+    }
+  },
+  {
+    "run": 80,
+    "naive": {
+      "density": {
+        "density_min_raw": 1.0944594610402117e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0428621049544584
+      },
+      "residual_std": 0.6645599507197528,
+      "training_mean_price": 0.6318258563421747
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 706,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.289240699846862
+      },
+      "density": {
+        "density_min_raw": 1.0944594610402117e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0428621049544584
+      },
+      "residual_std": 0.6227828509167681,
+      "training_mean_price": 0.6109458194365041
+    }
+  },
+  {
+    "run": 81,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0008918668505174343,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0437837871724014
+      },
+      "residual_std": 0.6914096709539873,
+      "training_mean_price": 0.6962998830916113
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 678,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.255499526302984
+      },
+      "density": {
+        "density_min_raw": 0.0008918668505174343,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0437837871724014
+      },
+      "residual_std": 0.6464506860304929,
+      "training_mean_price": 0.8421063327417813
+    }
+  },
+  {
+    "run": 82,
+    "naive": {
+      "density": {
+        "density_min_raw": 2.8708158143605697e-06,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0449394760340058
+      },
+      "residual_std": 0.6644533491631172,
+      "training_mean_price": 0.9639443417204511
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 678,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.589942688648934
+      },
+      "density": {
+        "density_min_raw": 2.8708158143605697e-06,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0449394760340058
+      },
+      "residual_std": 0.6366828083609096,
+      "training_mean_price": 0.8332813686591691
+    }
+  },
+  {
+    "run": 83,
+    "naive": {
+      "density": {
+        "density_min_raw": 5.378093341160447e-06,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0213002096649317
+      },
+      "residual_std": 0.6859645875511814,
+      "training_mean_price": 0.6644114190819405
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 714,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.653066034612207
+      },
+      "density": {
+        "density_min_raw": 5.378093341160447e-06,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0213002096649317
+      },
+      "residual_std": 0.6534086866398695,
+      "training_mean_price": 0.6696986901289176
+    }
+  },
+  {
+    "run": 84,
+    "naive": {
+      "density": {
+        "density_min_raw": 4.2327813473647406e-61,
+        "density_below_floor": 8,
+        "inverse_weight_at_cap": 8,
+        "density_median": 1.0122251836352736
+      },
+      "residual_std": 0.6660674497475519,
+      "training_mean_price": 0.5700173008120104
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 710,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3044342470970984
+      },
+      "density": {
+        "density_min_raw": 4.2327813473647406e-61,
+        "density_below_floor": 8,
+        "inverse_weight_at_cap": 8,
+        "density_median": 1.0122251836352736
+      },
+      "residual_std": 0.6263243667610013,
+      "training_mean_price": 0.6760680218368993
+    }
+  },
+  {
+    "run": 85,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0768628701883445,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.059263797337715
+      },
+      "residual_std": 0.6830734922455195,
+      "training_mean_price": 0.5983165991313081
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 679,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5748626901486116
+      },
+      "density": {
+        "density_min_raw": 0.0768628701883445,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.059263797337715
+      },
+      "residual_std": 0.64858556360003,
+      "training_mean_price": 0.6856305397032705
+    }
+  },
+  {
+    "run": 86,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.001209015345553551,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0590627097709588
+      },
+      "residual_std": 0.6660990652602373,
+      "training_mean_price": 0.631460076673847
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 674,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2184604689768492
+      },
+      "density": {
+        "density_min_raw": 0.001209015345553551,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0590627097709588
+      },
+      "residual_std": 0.6261778333444306,
+      "training_mean_price": 0.6447778861767758
+    }
+  },
+  {
+    "run": 87,
+    "naive": {
+      "density": {
+        "density_min_raw": 3.0706371053051606e-27,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0667714143865936
+      },
+      "residual_std": 0.6555037460823765,
+      "training_mean_price": 0.7300251058714171
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 693,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.6042820773209194
+      },
+      "density": {
+        "density_min_raw": 3.0706371053051606e-27,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0667714143865936
+      },
+      "residual_std": 0.6111529574480662,
+      "training_mean_price": 0.6998312203245441
+    }
+  },
+  {
+    "run": 88,
+    "naive": {
+      "density": {
+        "density_min_raw": 9.607701582465652e-11,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.04699179368458
+      },
+      "residual_std": 0.6795100007363846,
+      "training_mean_price": 0.7131643582561578
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 682,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.5980150018220476
+      },
+      "density": {
+        "density_min_raw": 9.607701582465652e-11,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.04699179368458
+      },
+      "residual_std": 0.64565550533978,
+      "training_mean_price": 0.694687273155946
+    }
+  },
+  {
+    "run": 89,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.06436261309162793,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.030976603230802
+      },
+      "residual_std": 0.6739284244576977,
+      "training_mean_price": 0.5451634710105118
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 711,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.299438526886466
+      },
+      "density": {
+        "density_min_raw": 0.06436261309162793,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.030976603230802
+      },
+      "residual_std": 0.628118233268082,
+      "training_mean_price": 0.5459310523510037
+    }
+  },
+  {
+    "run": 90,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.001746804869843265,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0791998097026665
+      },
+      "residual_std": 0.6786196537371633,
+      "training_mean_price": 0.6536576071648927
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 718,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.564174957487507
+      },
+      "density": {
+        "density_min_raw": 0.001746804869843265,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0791998097026665
+      },
+      "residual_std": 0.6442750730474088,
+      "training_mean_price": 0.7988625208083769
+    }
+  },
+  {
+    "run": 91,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00010276775593129644,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0609478954357918
+      },
+      "residual_std": 0.6674692072451104,
+      "training_mean_price": 0.7462749696086934
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 704,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3170795207135275
+      },
+      "density": {
+        "density_min_raw": 0.00010276775593129644,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0609478954357918
+      },
+      "residual_std": 0.6213497911077274,
+      "training_mean_price": 0.7158279570455622
+    }
+  },
+  {
+    "run": 92,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.003547868267992421,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0655584596333663
+      },
+      "residual_std": 0.6604504885875847,
+      "training_mean_price": 0.5515410551150531
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 680,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2436650845999218
+      },
+      "density": {
+        "density_min_raw": 0.003547868267992421,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0655584596333663
+      },
+      "residual_std": 0.6134640786907012,
+      "training_mean_price": 0.8031491298451826
+    }
+  },
+  {
+    "run": 93,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0009181070452680436,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0292458375833395
+      },
+      "residual_std": 0.6854622184682475,
+      "training_mean_price": 0.9071526485985778
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 699,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2228880876811115
+      },
+      "density": {
+        "density_min_raw": 0.0009181070452680436,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0292458375833395
+      },
+      "residual_std": 0.6366359695776644,
+      "training_mean_price": 0.7117490120289293
+    }
+  },
+  {
+    "run": 94,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.0007947616897908865,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0065634683421174
+      },
+      "residual_std": 0.6834558979257789,
+      "training_mean_price": 0.6091142753114259
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 704,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.558734261584516
+      },
+      "density": {
+        "density_min_raw": 0.0007947616897908865,
+        "density_below_floor": 3,
+        "inverse_weight_at_cap": 3,
+        "density_median": 1.0065634683421174
+      },
+      "residual_std": 0.6365437803545752,
+      "training_mean_price": 0.745182183670729
+    }
+  },
+  {
+    "run": 95,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.031072844169572948,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.045017263584899
+      },
+      "residual_std": 0.6673073512857582,
+      "training_mean_price": 0.5167180895196473
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 654,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2786791833131077
+      },
+      "density": {
+        "density_min_raw": 0.031072844169572948,
+        "density_below_floor": 0,
+        "inverse_weight_at_cap": 0,
+        "density_median": 1.045017263584899
+      },
+      "residual_std": 0.6245964471906396,
+      "training_mean_price": 0.7599115358553068
+    }
+  },
+  {
+    "run": 96,
+    "naive": {
+      "density": {
+        "density_min_raw": 0.00015886533837653751,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.045424666903778
+      },
+      "residual_std": 0.6796343317117847,
+      "training_mean_price": 0.651046147426925
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 674,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.3155487134106587
+      },
+      "density": {
+        "density_min_raw": 0.00015886533837653751,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.045424666903778
+      },
+      "residual_std": 0.6333026016110328,
+      "training_mean_price": 0.8579508075782403
+    }
+  },
+  {
+    "run": 97,
+    "naive": {
+      "density": {
+        "density_min_raw": 7.343126756747251e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0693672608462579
+      },
+      "residual_std": 0.6607375494555027,
+      "training_mean_price": 0.9442569612394522
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 711,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.2072660695029995
+      },
+      "density": {
+        "density_min_raw": 7.343126756747251e-05,
+        "density_below_floor": 1,
+        "inverse_weight_at_cap": 1,
+        "density_median": 1.0693672608462579
+      },
+      "residual_std": 0.6143541730328969,
+      "training_mean_price": 0.5966144572554827
+    }
+  },
+  {
+    "run": 98,
+    "naive": {
+      "density": {
+        "density_min_raw": 3.0079591235548447e-07,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0445720603621287
+      },
+      "residual_std": 0.6947060842522986,
+      "training_mean_price": 0.604614148749064
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 696,
+        "small_denominators": 0,
+        "tail_cap": 9,
+        "mean_estimated_excess": 3.217717510975666
+      },
+      "density": {
+        "density_min_raw": 3.0079591235548447e-07,
+        "density_below_floor": 2,
+        "inverse_weight_at_cap": 2,
+        "density_median": 1.0445720603621287
+      },
+      "residual_std": 0.6461871557102953,
+      "training_mean_price": 0.8358385887279819
+    }
+  },
+  {
+    "run": 99,
+    "naive": {
+      "density": {
+        "density_min_raw": 7.360436772126624e-09,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.0643601979402753
+      },
+      "residual_std": 0.6578858837338871,
+      "training_mean_price": 0.7196625038412432
+    },
+    "censoring_aware": {
+      "survival": {
+        "censored": 702,
+        "small_denominators": 0,
+        "tail_cap": 8,
+        "mean_estimated_excess": 2.542405863108933
+      },
+      "density": {
+        "density_min_raw": 7.360436772126624e-09,
+        "density_below_floor": 5,
+        "inverse_weight_at_cap": 5,
+        "density_median": 1.0643601979402753
+      },
+      "residual_std": 0.62608277532108,
+      "training_mean_price": 0.5679902051147799
+    }
+  }
+]

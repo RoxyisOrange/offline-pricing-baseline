@@ -1,0 +1,44 @@
+simulation:
+  n_train: 2000
+  n_test: 2000
+  n_repeats: 100
+  price_min: 0.0
+  price_max: 1.0
+  historical_price_mean: 0.5
+  historical_price_std: 0.5
+  price_sensitivity: 5.0
+  inventory_mean: 6.0
+  inventory_variance: 2.0
+  stockout_cost: 0.1
+algorithm:
+  bandwidth: 0.01
+  regularization: 0.0001
+  cross_fitting_folds: 3
+  batch_size: 10
+  survival_forest_trees: 500
+  survival_min_leaf: 15
+  survival_mode: paper_continuous
+  q_hidden:
+  - 100
+  - 100
+  q_max_iter: 180
+  density_hidden:
+  - 84
+  - 84
+  - 84
+  density_epochs: 80
+  density_batch_size: 128
+  density_floor: 0.01
+  max_inverse_density: 100.0
+  policy_hidden:
+  - 12
+  - 12
+  - 12
+  - 12
+  policy_epochs: 50
+  policy_learning_rate: 0.002
+  q_grid_step: 0.005
+evaluation:
+  price_grid_step: 0.001
+run:
+  seed: 20261125

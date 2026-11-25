@@ -1,0 +1,19 @@
+name: baseline-check
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: python verify_baseline.py
+      - name: Keep baseline v1 immutable
+        run: git diff --exit-code baseline-v1 -- data/v1 config/baseline.yaml pricing_sim/simulation.py pricing_sim/evaluation.py results/baseline-2026-11-25

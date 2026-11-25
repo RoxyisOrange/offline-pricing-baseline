@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.py[cod]
+.DS_Store
+results/*
+!results/baseline-2026-11-25/

@@ -1,0 +1,12 @@
+{
+  "baseline_id": "python-survival-q100-fold3-100repeats-seed20261125",
+  "origin": "Restored from the original q100_folds3_full experiment archive; the 100 runs were not retrained during packaging.",
+  "checkpoint_history": "Runs 0-19 reused identical-seed checkpoints from the 20-repeat run; runs 20-99 completed the 100-repeat experiment.",
+  "data_manifest_sha256": "deb402ab59b61bc090826b9f784de4af593df53755313c656687e34c39968b41",
+  "result_sha256": {
+    "predictions.csv.gz": "2c89bf985622642c75c6badf93cd72a53a522ca25a495af5b40f942f008564dd",
+    "metrics_summary.csv": "67c38b9f938015a7256f4e3a53512c631e67da772ccd9a58738cbcf9e046d596",
+    "metrics_per_run.csv": "fa55e3c706f21a9c2d3a9a688267270a2e6d0266eb05faaf147185d9cebdcd93",
+    "diagnostics.json": "b522d20391eb220e776df29ec99b2d30598bcf6a0d7b6af4c1a50f1e9059ee31"
+  }
+}
