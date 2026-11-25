@@ -1,0 +1,302 @@
+{
+  "dataset": "E1-E4",
+  "layout_version": 2,
+  "version": "2.0.0",
+  "rounds": 100,
+  "master_seed": 20261125,
+  "pilot_seed": 20261126,
+  "pilot_log2_n": 17,
+  "n_train": 2000,
+  "n_test": 2000,
+  "group_threshold": 0.6366197723675814,
+  "n_per_train_group": 1000,
+  "n_per_test_group": 1000,
+  "inventory_mean_test": 6.0,
+  "inventory_variance": 2.0,
+  "price_mean": 0.5,
+  "price_sd": 0.5,
+  "nb_size": 2.0,
+  "stockout_cost": 0.1,
+  "oracle_step": 0.001,
+  "code_revision": "51dd13cab453e98593f4df8f441152888c3eddab",
+  "generator_sha256": "73336736a89f0753968f795a7c2d527a5408cdbfccc0054807565e5b9cc00056",
+  "exporter_sha256": "318aba7bd399500651dd219bc83950d71e29421527bc8e679f963df7f2c82e67",
+  "versions": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "scipy": "1.11.4"
+  },
+  "demand_rate": {
+    "intercept": 5,
+    "x1_squared": 1,
+    "x2_squared": 1,
+    "price_coefficient": -5
+  },
+  "demand_shift": 1,
+  "price_bounds": [
+    0,
+    1
+  ],
+  "inventory_rule": "nonnegative normal, then floor",
+  "censor_indicator": "delta = 1(sales < inventory)",
+  "scenarios": {
+    "S01": {
+      "scenario_id": "S01",
+      "market": "poisson",
+      "low_target_pct": 10,
+      "high_target_pct": 10,
+      "directory": "poisson/S01_L10_H10",
+      "train_path": "train/poisson/S01_L10_H10",
+      "truth_path": "ground_truth/poisson/S01_L10_H10",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S02": {
+      "scenario_id": "S02",
+      "market": "poisson",
+      "low_target_pct": 30,
+      "high_target_pct": 30,
+      "directory": "poisson/S02_L30_H30",
+      "train_path": "train/poisson/S02_L30_H30",
+      "truth_path": "ground_truth/poisson/S02_L30_H30",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S03": {
+      "scenario_id": "S03",
+      "market": "poisson",
+      "low_target_pct": 50,
+      "high_target_pct": 50,
+      "directory": "poisson/S03_L50_H50",
+      "train_path": "train/poisson/S03_L50_H50",
+      "truth_path": "ground_truth/poisson/S03_L50_H50",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S04": {
+      "scenario_id": "S04",
+      "market": "poisson",
+      "low_target_pct": 70,
+      "high_target_pct": 70,
+      "directory": "poisson/S04_L70_H70",
+      "train_path": "train/poisson/S04_L70_H70",
+      "truth_path": "ground_truth/poisson/S04_L70_H70",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S05": {
+      "scenario_id": "S05",
+      "market": "poisson",
+      "low_target_pct": 90,
+      "high_target_pct": 90,
+      "directory": "poisson/S05_L90_H90",
+      "train_path": "train/poisson/S05_L90_H90",
+      "truth_path": "ground_truth/poisson/S05_L90_H90",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S06": {
+      "scenario_id": "S06",
+      "market": "poisson",
+      "low_target_pct": 40,
+      "high_target_pct": 60,
+      "directory": "poisson/S06_L40_H60",
+      "train_path": "train/poisson/S06_L40_H60",
+      "truth_path": "ground_truth/poisson/S06_L40_H60",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S07": {
+      "scenario_id": "S07",
+      "market": "poisson",
+      "low_target_pct": 30,
+      "high_target_pct": 70,
+      "directory": "poisson/S07_L30_H70",
+      "train_path": "train/poisson/S07_L30_H70",
+      "truth_path": "ground_truth/poisson/S07_L30_H70",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S08": {
+      "scenario_id": "S08",
+      "market": "poisson",
+      "low_target_pct": 20,
+      "high_target_pct": 80,
+      "directory": "poisson/S08_L20_H80",
+      "train_path": "train/poisson/S08_L20_H80",
+      "truth_path": "ground_truth/poisson/S08_L20_H80",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S09": {
+      "scenario_id": "S09",
+      "market": "poisson",
+      "low_target_pct": 10,
+      "high_target_pct": 90,
+      "directory": "poisson/S09_L10_H90",
+      "train_path": "train/poisson/S09_L10_H90",
+      "truth_path": "ground_truth/poisson/S09_L10_H90",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S10": {
+      "scenario_id": "S10",
+      "market": "poisson",
+      "low_target_pct": 20,
+      "high_target_pct": 40,
+      "directory": "poisson/S10_L20_H40",
+      "train_path": "train/poisson/S10_L20_H40",
+      "truth_path": "ground_truth/poisson/S10_L20_H40",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S11": {
+      "scenario_id": "S11",
+      "market": "poisson",
+      "low_target_pct": 10,
+      "high_target_pct": 50,
+      "directory": "poisson/S11_L10_H50",
+      "train_path": "train/poisson/S11_L10_H50",
+      "truth_path": "ground_truth/poisson/S11_L10_H50",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S12": {
+      "scenario_id": "S12",
+      "market": "poisson",
+      "low_target_pct": 60,
+      "high_target_pct": 80,
+      "directory": "poisson/S12_L60_H80",
+      "train_path": "train/poisson/S12_L60_H80",
+      "truth_path": "ground_truth/poisson/S12_L60_H80",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S13": {
+      "scenario_id": "S13",
+      "market": "poisson",
+      "low_target_pct": 50,
+      "high_target_pct": 90,
+      "directory": "poisson/S13_L50_H90",
+      "train_path": "train/poisson/S13_L50_H90",
+      "truth_path": "ground_truth/poisson/S13_L50_H90",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S14": {
+      "scenario_id": "S14",
+      "market": "negative_binomial",
+      "low_target_pct": 10,
+      "high_target_pct": 10,
+      "directory": "negative_binomial/S14_L10_H10",
+      "train_path": "train/negative_binomial/S14_L10_H10",
+      "truth_path": "ground_truth/negative_binomial/S14_L10_H10",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S15": {
+      "scenario_id": "S15",
+      "market": "negative_binomial",
+      "low_target_pct": 50,
+      "high_target_pct": 50,
+      "directory": "negative_binomial/S15_L50_H50",
+      "train_path": "train/negative_binomial/S15_L50_H50",
+      "truth_path": "ground_truth/negative_binomial/S15_L50_H50",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S16": {
+      "scenario_id": "S16",
+      "market": "negative_binomial",
+      "low_target_pct": 90,
+      "high_target_pct": 90,
+      "directory": "negative_binomial/S16_L90_H90",
+      "train_path": "train/negative_binomial/S16_L90_H90",
+      "truth_path": "ground_truth/negative_binomial/S16_L90_H90",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S17": {
+      "scenario_id": "S17",
+      "market": "negative_binomial",
+      "low_target_pct": 30,
+      "high_target_pct": 70,
+      "directory": "negative_binomial/S17_L30_H70",
+      "train_path": "train/negative_binomial/S17_L30_H70",
+      "truth_path": "ground_truth/negative_binomial/S17_L30_H70",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    },
+    "S18": {
+      "scenario_id": "S18",
+      "market": "negative_binomial",
+      "low_target_pct": 10,
+      "high_target_pct": 90,
+      "directory": "negative_binomial/S18_L10_H90",
+      "train_path": "train/negative_binomial/S18_L10_H90",
+      "truth_path": "ground_truth/negative_binomial/S18_L10_H90",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    }
+  },
+  "experiments": {
+    "E1": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ],
+    "E2": [
+      "S03",
+      "S06",
+      "S07",
+      "S08",
+      "S09"
+    ],
+    "E3": [
+      "S02",
+      "S10",
+      "S11",
+      "S03",
+      "S06",
+      "S07",
+      "S04",
+      "S12",
+      "S13"
+    ],
+    "E4.1": [
+      "S01",
+      "S03",
+      "S05",
+      "S07",
+      "S09"
+    ],
+    "E4.2": [
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18"
+    ]
+  }
+}

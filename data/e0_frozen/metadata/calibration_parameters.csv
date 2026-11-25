@@ -1,0 +1,3 @@
+market,group,target_rate,inventory_mean_parameter,source
+poisson,Low,,6,fixed E0 mechanism
+poisson,High,,6,fixed E0 mechanism

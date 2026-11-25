@@ -1,0 +1,2 @@
+scenario_id,market,low_target_pct,high_target_pct,directory,train_path,truth_path,rounds,n_train,n_test
+E0,poisson,,,poisson/E0,train/poisson/E0,ground_truth/poisson/E0,100,2000,2000

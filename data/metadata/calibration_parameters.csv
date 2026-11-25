@@ -1,0 +1,25 @@
+market,group,target_rate,inventory_mean_parameter,source
+poisson,Low,0.10000000000000001,8.26982658329079,Sobol calibration
+poisson,High,0.10000000000000001,9.140688599448394,Sobol calibration
+poisson,Low,0.29999999999999999,6.0053605321930856,Sobol calibration
+poisson,High,0.29999999999999999,6.7795870075898694,Sobol calibration
+poisson,Low,0.5,4.5845367156992758,Sobol calibration
+poisson,High,0.5,5.2896275530342747,Sobol calibration
+poisson,Low,0.69999999999999996,3.2903804371649841,Sobol calibration
+poisson,High,0.69999999999999996,3.9288350932549889,Sobol calibration
+poisson,Low,0.90000000000000002,1.5293795287315144,Sobol calibration
+poisson,High,0.90000000000000002,2.1180001576253251,Sobol calibration
+poisson,Low,0.40000000000000002,5.2542458762716864,Sobol calibration
+poisson,High,0.59999999999999998,4.6167920550127652,Sobol calibration
+poisson,Low,0.20000000000000001,6.9267649673589471,Sobol calibration
+poisson,High,0.80000000000000004,3.1574729618984394,Sobol calibration
+poisson,High,0.40000000000000002,5.9932102571004195,Sobol calibration
+poisson,Low,0.59999999999999998,3.9453525002576719,Sobol calibration
+negative_binomial,Low,0.10000000000000001,9.1697926232069147,Sobol calibration
+negative_binomial,High,0.10000000000000001,10.415709755683473,Sobol calibration
+negative_binomial,Low,0.5,4.1438061330567484,Sobol calibration
+negative_binomial,High,0.5,4.7362500439941835,Sobol calibration
+negative_binomial,Low,0.90000000000000002,1.0412456763292239,Sobol calibration
+negative_binomial,High,0.90000000000000002,1.4068267482212027,Sobol calibration
+negative_binomial,Low,0.29999999999999999,5.8036807210098731,Sobol calibration
+negative_binomial,High,0.69999999999999996,3.2563673604990226,Sobol calibration

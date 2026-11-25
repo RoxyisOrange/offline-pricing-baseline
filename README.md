@@ -4,19 +4,19 @@ E1–E4 从同一份数据发布读取训练集和测试集。选好场景后，
 
 **开跑状态。** 数据 QA 通过，可以使用本次发布的数据开始开发和小规模试跑。当前 Python DR 的 RSF 整数截断边界待确认。E4 所需的 Censored Poisson 尚待实现和验收。正式 100 轮比较前，请在组内固定要采用的模型版本。详见 [正式数据质量报告](reports/data_quality/DATA_QUALITY_REPORT.md)。
 
-## 1. 拿到数据后先验证
+## 1. 克隆仓库并验证数据
 
-1. 使用 Python 3.11。在仓库根目录创建环境。
-2. 从负责人取得同一份 release 2.0.0，将 `train/`、`test/`、`ground_truth/` 和 `metadata/` 放在仓库的 `data/` 下。这些扩展实验的 CSV 随数据包分发。
-3. 校验发布文件。全组使用相同的发布 ID，`run_manifest.json` 会记录本次训练实际使用的 ID。
+`main` 包含代码以及 E1–E4 的正式数据。克隆后，训练集、共享测试集、真值和元数据都在仓库的 `data/` 下。使用 Python 3.11，在仓库根目录创建环境并校验发布文件。
 
 ```bash
+git clone https://github.com/RoxyisOrange/offline-pricing-baseline.git
+cd offline-pricing-baseline
 python3.11 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 (cd data && shasum -a 256 -c metadata/checksums.sha256)
 ```
 
-本次正式发布 ID 为 `a896f4bd54d582eb3a55c472fc2cba8597b0979bdc2e47cb7f054d78c2355dd3`。日常实验直接使用分发好的 CSV。统一生成器由 `generate_data.py` 调用 [pricing_sim/experiment_data.py](pricing_sim/experiment_data.py)。正式目录的发布溯源、固定参数和校准结果在 `data/metadata/`。
+正式数据版本为 2.0.0，发布 ID 为 `a896f4bd54d582eb3a55c472fc2cba8597b0979bdc2e47cb7f054d78c2355dd3`。`run_manifest.json` 会记录本次训练使用的发布 ID。日常实验直接读取仓库中的 CSV。统一生成器由 `generate_data.py` 调用 [pricing_sim/experiment_data.py](pricing_sim/experiment_data.py)。正式目录的发布溯源、固定参数和校准结果在 [data/metadata/](data/metadata/)。
 
 ## 2. 找到自己实验的训练目录
 
@@ -58,7 +58,7 @@ python3.11 -m venv .venv
 | `data/test/diagnostics/{poisson,negative_binomial}/` | 每市场每轮一份历史价、库存、销量和截断指标，用于需求恢复和 Q 诊断，与同轮共享测试逐行对齐 |
 | `data/ground_truth/<市场>/<场景>/` | 训练真值，由 `sample_id` 和对应场景轮次对齐，仅供 QA 和诊断 |
 | `data/metadata/` | `scenario_manifest.csv`、`experiment_mapping.json`、固定参数、校准结果和 SHA-256 |
-| `data/e0_frozen/` 和 `data/v1/` | E0 的只读 CSV 镜像与原始归档，供历史核验和显式重跑 |
+| `data/e0_frozen/` 和 `data/v1/` | E0 的冻结 CSV 镜像与原始归档，供历史核验和显式重跑 |
 
 ## 3. 用现有模型训练
 
@@ -72,7 +72,7 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
 
 - E1 可用 `--experiment E1`。E3 只跑新场景时用 `--scenarios S10 S11 S12 S13`。E4.2 的现有对照可用 `--experiment E4.2`。按 `--experiment E2`、`E3` 或 `E4.1` 选择时，CLI 会跑对应实验的全部场景，包括可复用的场景。
 - 统一的训练入口只拟合 `naive` 和 `censoring_aware`（当前 Python DR），并载入固定的 [训练配置](config/baseline.yaml)与[各轮拟合种子](config/fit_seeds.json)。Oracle 由评价函数计算。
-- 正式训练省略 `--limit`，使用新的输出目录。中断后用原命令、相同数据和输出目录加 `--resume`。数据包放在其他位置时加 `--data /path/to/release`。
+- 正式训练省略 `--limit`，使用新的输出目录。中断后用原命令、相同数据和输出目录加 `--resume`。有其他已发布的数据目录时，可用 `--data /path/to/release` 显式指定。
 - 组内共享同版本的 `run_manifest.json` 和 `metrics_per_run.csv`。复用场景时核对数据、配置、模型版本和轮次，同一场景／方法／轮次只保留一份成绩。代码版本用运行时的 Git commit 记录。
 
 ## 4. 用自己模型调用公共评价
@@ -107,7 +107,7 @@ print(scores[["group", "method", "profit", "profit_ratio", "regret"]])
 
 ## 5. QA、冻结的 E0 与代码入口
 
-正式数据核对见 [质量报告](reports/data_quality/DATA_QUALITY_REPORT.md)，包括 [逐轮统计](reports/data_quality/per_round_summary.csv)、[库存覆盖](reports/data_quality/coverage_summary.csv) 和 [实际运行日志](reports/data_quality/validation.log)。完整 QA 还需 E0 的 `data/e0_frozen/` CSV 镜像及仓库自带的 `data/v1/`。重新运行审核时，输出到新目录。默认包含 S05 和 S16 各 5 轮真实模型试跑，只检查数据时可加 `--skip-model-pilot`。逐字节复现检查使用发布时的 Python 3.11.7 与 `requirements.txt` 中固定的 NumPy、Pandas、SciPy。
+正式数据核对见 [质量报告](reports/data_quality/DATA_QUALITY_REPORT.md)，包括 [逐轮统计](reports/data_quality/per_round_summary.csv)、[库存覆盖](reports/data_quality/coverage_summary.csv) 和 [实际运行日志](reports/data_quality/validation.log)。完整 QA 读取仓库中的正式发布、E0 的 `data/e0_frozen/` CSV 镜像与 `data/v1/` 原始归档。重新运行审核时，输出到新目录。默认包含 S05 和 S16 各 5 轮真实模型试跑，只检查数据时可加 `--skip-model-pilot`。逐字节复现检查使用发布时的 Python 3.11.7 与 `requirements.txt` 中固定的 NumPy、Pandas、SciPy。
 
 ```bash
 .venv/bin/python -m pip install matplotlib==3.8.0

@@ -1,1 +1,5 @@
+* text=auto eol=lf
 *.gz binary
+
+# Preserve the published bytes on every platform for SHA-256 verification.
+data/** -text

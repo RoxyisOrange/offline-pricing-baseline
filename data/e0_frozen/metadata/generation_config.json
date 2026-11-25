@@ -1,0 +1,692 @@
+{
+  "dataset": "E0",
+  "layout_version": 2,
+  "version": "baseline-v1",
+  "source_revision": "9c1ff325cf13497b41298ae84167b283af36c7c0",
+  "source_manifest_sha256": "deb402ab59b61bc090826b9f784de4af593df53755313c656687e34c39968b41",
+  "source_seed_plan": "SeedSequence(root).spawn(repeats); pair.spawn(3)",
+  "source_runs": [
+    {
+      "run": 0,
+      "train_seed": 1275580082,
+      "test_seed": 1233404615,
+      "fit_seed": 2905316461
+    },
+    {
+      "run": 1,
+      "train_seed": 566883270,
+      "test_seed": 4064383196,
+      "fit_seed": 2450530386
+    },
+    {
+      "run": 2,
+      "train_seed": 4245652681,
+      "test_seed": 2911287394,
+      "fit_seed": 1835978159
+    },
+    {
+      "run": 3,
+      "train_seed": 1868440975,
+      "test_seed": 4214177504,
+      "fit_seed": 383973494
+    },
+    {
+      "run": 4,
+      "train_seed": 2588873177,
+      "test_seed": 969346447,
+      "fit_seed": 915735136
+    },
+    {
+      "run": 5,
+      "train_seed": 1628756506,
+      "test_seed": 1768448372,
+      "fit_seed": 1760415988
+    },
+    {
+      "run": 6,
+      "train_seed": 1479170326,
+      "test_seed": 4207962514,
+      "fit_seed": 70148385
+    },
+    {
+      "run": 7,
+      "train_seed": 3474671544,
+      "test_seed": 4051053067,
+      "fit_seed": 3207350196
+    },
+    {
+      "run": 8,
+      "train_seed": 1503281336,
+      "test_seed": 3824924595,
+      "fit_seed": 1324781265
+    },
+    {
+      "run": 9,
+      "train_seed": 3600835186,
+      "test_seed": 2577843342,
+      "fit_seed": 1524150855
+    },
+    {
+      "run": 10,
+      "train_seed": 334160577,
+      "test_seed": 258110227,
+      "fit_seed": 1341962184
+    },
+    {
+      "run": 11,
+      "train_seed": 2245536576,
+      "test_seed": 257293399,
+      "fit_seed": 970666188
+    },
+    {
+      "run": 12,
+      "train_seed": 4196838830,
+      "test_seed": 3243434656,
+      "fit_seed": 4068574476
+    },
+    {
+      "run": 13,
+      "train_seed": 1020957236,
+      "test_seed": 980488746,
+      "fit_seed": 820813543
+    },
+    {
+      "run": 14,
+      "train_seed": 3883087758,
+      "test_seed": 3988402240,
+      "fit_seed": 1378722965
+    },
+    {
+      "run": 15,
+      "train_seed": 3801748577,
+      "test_seed": 1927076713,
+      "fit_seed": 388688330
+    },
+    {
+      "run": 16,
+      "train_seed": 690143306,
+      "test_seed": 3849895514,
+      "fit_seed": 3515372935
+    },
+    {
+      "run": 17,
+      "train_seed": 1256797697,
+      "test_seed": 4068450285,
+      "fit_seed": 3718455374
+    },
+    {
+      "run": 18,
+      "train_seed": 3780069274,
+      "test_seed": 2524789623,
+      "fit_seed": 8774541
+    },
+    {
+      "run": 19,
+      "train_seed": 3457006633,
+      "test_seed": 552531796,
+      "fit_seed": 3442661059
+    },
+    {
+      "run": 20,
+      "train_seed": 1837541519,
+      "test_seed": 906278563,
+      "fit_seed": 2037774489
+    },
+    {
+      "run": 21,
+      "train_seed": 2967104240,
+      "test_seed": 2351374551,
+      "fit_seed": 2742766302
+    },
+    {
+      "run": 22,
+      "train_seed": 82070858,
+      "test_seed": 4294768812,
+      "fit_seed": 3057822089
+    },
+    {
+      "run": 23,
+      "train_seed": 2655236244,
+      "test_seed": 3077355501,
+      "fit_seed": 3141240433
+    },
+    {
+      "run": 24,
+      "train_seed": 1671145727,
+      "test_seed": 751985888,
+      "fit_seed": 98072497
+    },
+    {
+      "run": 25,
+      "train_seed": 600106612,
+      "test_seed": 2346559426,
+      "fit_seed": 2131212364
+    },
+    {
+      "run": 26,
+      "train_seed": 2330115081,
+      "test_seed": 1353389162,
+      "fit_seed": 1482673753
+    },
+    {
+      "run": 27,
+      "train_seed": 3039860097,
+      "test_seed": 4083470875,
+      "fit_seed": 4003125904
+    },
+    {
+      "run": 28,
+      "train_seed": 1848645249,
+      "test_seed": 3018711286,
+      "fit_seed": 2244584503
+    },
+    {
+      "run": 29,
+      "train_seed": 2910220908,
+      "test_seed": 64860297,
+      "fit_seed": 106754461
+    },
+    {
+      "run": 30,
+      "train_seed": 1724072381,
+      "test_seed": 1248915669,
+      "fit_seed": 736324754
+    },
+    {
+      "run": 31,
+      "train_seed": 410889394,
+      "test_seed": 709814630,
+      "fit_seed": 1706355934
+    },
+    {
+      "run": 32,
+      "train_seed": 1062142212,
+      "test_seed": 2049344695,
+      "fit_seed": 614548007
+    },
+    {
+      "run": 33,
+      "train_seed": 531077303,
+      "test_seed": 1496988969,
+      "fit_seed": 1173547061
+    },
+    {
+      "run": 34,
+      "train_seed": 473994160,
+      "test_seed": 2678627458,
+      "fit_seed": 1441340884
+    },
+    {
+      "run": 35,
+      "train_seed": 2367483918,
+      "test_seed": 3545912907,
+      "fit_seed": 3900828972
+    },
+    {
+      "run": 36,
+      "train_seed": 3859236381,
+      "test_seed": 1473688715,
+      "fit_seed": 4093290971
+    },
+    {
+      "run": 37,
+      "train_seed": 541429522,
+      "test_seed": 2383850975,
+      "fit_seed": 610274482
+    },
+    {
+      "run": 38,
+      "train_seed": 1987222541,
+      "test_seed": 3644445059,
+      "fit_seed": 2582129664
+    },
+    {
+      "run": 39,
+      "train_seed": 433269007,
+      "test_seed": 3787511,
+      "fit_seed": 1836898973
+    },
+    {
+      "run": 40,
+      "train_seed": 4041182754,
+      "test_seed": 3034375022,
+      "fit_seed": 1804361948
+    },
+    {
+      "run": 41,
+      "train_seed": 1037024303,
+      "test_seed": 664588678,
+      "fit_seed": 289375384
+    },
+    {
+      "run": 42,
+      "train_seed": 3646393880,
+      "test_seed": 3308536192,
+      "fit_seed": 1995985394
+    },
+    {
+      "run": 43,
+      "train_seed": 3256105653,
+      "test_seed": 829288805,
+      "fit_seed": 1611643541
+    },
+    {
+      "run": 44,
+      "train_seed": 1372435791,
+      "test_seed": 2215633851,
+      "fit_seed": 3390073257
+    },
+    {
+      "run": 45,
+      "train_seed": 3467271475,
+      "test_seed": 223236752,
+      "fit_seed": 3540852049
+    },
+    {
+      "run": 46,
+      "train_seed": 3865251095,
+      "test_seed": 962886566,
+      "fit_seed": 673472157
+    },
+    {
+      "run": 47,
+      "train_seed": 1763939981,
+      "test_seed": 2341568905,
+      "fit_seed": 1530604598
+    },
+    {
+      "run": 48,
+      "train_seed": 3844452106,
+      "test_seed": 3852155366,
+      "fit_seed": 2537981124
+    },
+    {
+      "run": 49,
+      "train_seed": 2704679170,
+      "test_seed": 35017584,
+      "fit_seed": 3943871499
+    },
+    {
+      "run": 50,
+      "train_seed": 3540995759,
+      "test_seed": 3226486458,
+      "fit_seed": 947718242
+    },
+    {
+      "run": 51,
+      "train_seed": 241912480,
+      "test_seed": 1187835053,
+      "fit_seed": 1663201758
+    },
+    {
+      "run": 52,
+      "train_seed": 2078365201,
+      "test_seed": 3687233423,
+      "fit_seed": 1305076012
+    },
+    {
+      "run": 53,
+      "train_seed": 3544744780,
+      "test_seed": 919050604,
+      "fit_seed": 4252783419
+    },
+    {
+      "run": 54,
+      "train_seed": 4274179241,
+      "test_seed": 2397282338,
+      "fit_seed": 1466097452
+    },
+    {
+      "run": 55,
+      "train_seed": 2021889293,
+      "test_seed": 719322563,
+      "fit_seed": 3252206611
+    },
+    {
+      "run": 56,
+      "train_seed": 911339298,
+      "test_seed": 3632504655,
+      "fit_seed": 2490928118
+    },
+    {
+      "run": 57,
+      "train_seed": 1949225476,
+      "test_seed": 3505051894,
+      "fit_seed": 1167724251
+    },
+    {
+      "run": 58,
+      "train_seed": 343722136,
+      "test_seed": 2091807496,
+      "fit_seed": 1881469317
+    },
+    {
+      "run": 59,
+      "train_seed": 1722304105,
+      "test_seed": 3817848292,
+      "fit_seed": 2459628998
+    },
+    {
+      "run": 60,
+      "train_seed": 2118965200,
+      "test_seed": 3619601804,
+      "fit_seed": 1863707082
+    },
+    {
+      "run": 61,
+      "train_seed": 3441693015,
+      "test_seed": 501915407,
+      "fit_seed": 3848516973
+    },
+    {
+      "run": 62,
+      "train_seed": 2145893005,
+      "test_seed": 1003331946,
+      "fit_seed": 3175195917
+    },
+    {
+      "run": 63,
+      "train_seed": 4147569718,
+      "test_seed": 2232666137,
+      "fit_seed": 1099783794
+    },
+    {
+      "run": 64,
+      "train_seed": 3924003837,
+      "test_seed": 4259784206,
+      "fit_seed": 1289847068
+    },
+    {
+      "run": 65,
+      "train_seed": 1383545053,
+      "test_seed": 508776611,
+      "fit_seed": 1913630634
+    },
+    {
+      "run": 66,
+      "train_seed": 1705265177,
+      "test_seed": 1172405922,
+      "fit_seed": 442850733
+    },
+    {
+      "run": 67,
+      "train_seed": 4244722564,
+      "test_seed": 1971891059,
+      "fit_seed": 4145151495
+    },
+    {
+      "run": 68,
+      "train_seed": 1931958658,
+      "test_seed": 2468848491,
+      "fit_seed": 2930074899
+    },
+    {
+      "run": 69,
+      "train_seed": 3760138320,
+      "test_seed": 1010487143,
+      "fit_seed": 3326558309
+    },
+    {
+      "run": 70,
+      "train_seed": 3572659276,
+      "test_seed": 1678341680,
+      "fit_seed": 2432350455
+    },
+    {
+      "run": 71,
+      "train_seed": 3857994234,
+      "test_seed": 889655671,
+      "fit_seed": 3681644858
+    },
+    {
+      "run": 72,
+      "train_seed": 14712838,
+      "test_seed": 2191940029,
+      "fit_seed": 2423875730
+    },
+    {
+      "run": 73,
+      "train_seed": 2547260391,
+      "test_seed": 423217615,
+      "fit_seed": 1041727371
+    },
+    {
+      "run": 74,
+      "train_seed": 52806785,
+      "test_seed": 414314343,
+      "fit_seed": 3260661744
+    },
+    {
+      "run": 75,
+      "train_seed": 1930080275,
+      "test_seed": 3290730123,
+      "fit_seed": 3452325476
+    },
+    {
+      "run": 76,
+      "train_seed": 2244811659,
+      "test_seed": 1084811513,
+      "fit_seed": 3663484153
+    },
+    {
+      "run": 77,
+      "train_seed": 947007692,
+      "test_seed": 2606231487,
+      "fit_seed": 1469272942
+    },
+    {
+      "run": 78,
+      "train_seed": 2762043477,
+      "test_seed": 2262772946,
+      "fit_seed": 2775613553
+    },
+    {
+      "run": 79,
+      "train_seed": 1569479672,
+      "test_seed": 73350354,
+      "fit_seed": 2308298532
+    },
+    {
+      "run": 80,
+      "train_seed": 3256478209,
+      "test_seed": 3536978909,
+      "fit_seed": 1314662015
+    },
+    {
+      "run": 81,
+      "train_seed": 73191787,
+      "test_seed": 1784121938,
+      "fit_seed": 3701398894
+    },
+    {
+      "run": 82,
+      "train_seed": 51444989,
+      "test_seed": 3582229339,
+      "fit_seed": 1256878808
+    },
+    {
+      "run": 83,
+      "train_seed": 1328467901,
+      "test_seed": 1607425215,
+      "fit_seed": 2862403955
+    },
+    {
+      "run": 84,
+      "train_seed": 2311928018,
+      "test_seed": 832183822,
+      "fit_seed": 1980431832
+    },
+    {
+      "run": 85,
+      "train_seed": 2585796793,
+      "test_seed": 2045535899,
+      "fit_seed": 510998807
+    },
+    {
+      "run": 86,
+      "train_seed": 1171678263,
+      "test_seed": 789311808,
+      "fit_seed": 419545909
+    },
+    {
+      "run": 87,
+      "train_seed": 1901152756,
+      "test_seed": 3373214580,
+      "fit_seed": 2126425246
+    },
+    {
+      "run": 88,
+      "train_seed": 3273106032,
+      "test_seed": 3450378169,
+      "fit_seed": 3774503150
+    },
+    {
+      "run": 89,
+      "train_seed": 4160104457,
+      "test_seed": 94951321,
+      "fit_seed": 2202161720
+    },
+    {
+      "run": 90,
+      "train_seed": 2128067279,
+      "test_seed": 2982317979,
+      "fit_seed": 1405781615
+    },
+    {
+      "run": 91,
+      "train_seed": 2993702550,
+      "test_seed": 1532582921,
+      "fit_seed": 3592347227
+    },
+    {
+      "run": 92,
+      "train_seed": 4042137189,
+      "test_seed": 3814371966,
+      "fit_seed": 3758468899
+    },
+    {
+      "run": 93,
+      "train_seed": 3255122646,
+      "test_seed": 763291515,
+      "fit_seed": 2375344204
+    },
+    {
+      "run": 94,
+      "train_seed": 3290184419,
+      "test_seed": 696389855,
+      "fit_seed": 870329640
+    },
+    {
+      "run": 95,
+      "train_seed": 3796175120,
+      "test_seed": 3561440268,
+      "fit_seed": 1591725583
+    },
+    {
+      "run": 96,
+      "train_seed": 3388393431,
+      "test_seed": 1873079771,
+      "fit_seed": 4218083982
+    },
+    {
+      "run": 97,
+      "train_seed": 581858,
+      "test_seed": 3803398387,
+      "fit_seed": 535267952
+    },
+    {
+      "run": 98,
+      "train_seed": 2670900843,
+      "test_seed": 2000537479,
+      "fit_seed": 521868142
+    },
+    {
+      "run": 99,
+      "train_seed": 211624479,
+      "test_seed": 900496820,
+      "fit_seed": 287247074
+    }
+  ],
+  "legacy_config": {
+    "simulation": {
+      "n_train": 2000,
+      "n_test": 2000,
+      "n_repeats": 100,
+      "price_min": 0.0,
+      "price_max": 1.0,
+      "historical_price_mean": 0.5,
+      "historical_price_std": 0.5,
+      "price_sensitivity": 5.0,
+      "inventory_mean": 6.0,
+      "inventory_variance": 2.0,
+      "stockout_cost": 0.1
+    },
+    "algorithm": {
+      "bandwidth": 0.01,
+      "regularization": 0.0001,
+      "cross_fitting_folds": 3,
+      "batch_size": 10,
+      "survival_forest_trees": 500,
+      "survival_min_leaf": 15,
+      "survival_mode": "paper_continuous",
+      "q_hidden": [
+        100,
+        100
+      ],
+      "q_max_iter": 180,
+      "density_hidden": [
+        84,
+        84,
+        84
+      ],
+      "density_epochs": 80,
+      "density_batch_size": 128,
+      "density_floor": 0.01,
+      "max_inverse_density": 100.0,
+      "policy_hidden": [
+        12,
+        12,
+        12,
+        12
+      ],
+      "policy_epochs": 50,
+      "policy_learning_rate": 0.002,
+      "q_grid_step": 0.005
+    },
+    "evaluation": {
+      "price_grid_step": 0.001
+    },
+    "run": {
+      "seed": 20261125
+    }
+  },
+  "rounds": 100,
+  "n_train": 2000,
+  "n_test": 2000,
+  "group_threshold": 0.6366197723675814,
+  "versions": {
+    "python": "3.11.7",
+    "numpy": "1.26.4",
+    "pandas": "2.1.4",
+    "scipy": "1.11.4"
+  },
+  "scenarios": {
+    "E0": {
+      "scenario_id": "E0",
+      "market": "poisson",
+      "low_target_pct": null,
+      "high_target_pct": null,
+      "directory": "poisson/E0",
+      "train_path": "train/poisson/E0",
+      "truth_path": "ground_truth/poisson/E0",
+      "rounds": 100,
+      "n_train": 2000,
+      "n_test": 2000
+    }
+  },
+  "experiments": {
+    "E0": [
+      "E0"
+    ]
+  }
+}

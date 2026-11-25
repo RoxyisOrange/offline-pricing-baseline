@@ -469,17 +469,12 @@ def scan_formal_rows(audit):
 
 def check_e0(audit, repo):
     prefix = "e0_frozen/"
-    archive = audit.root / "e0_frozen"
     original = audit.root / "v1"
     original_manifest = load_manifest(original)
     e0 = open_dataset(audit.root, scenario_id="E0")
     audit.require(e0.scenarios == ("E0",) and e0.rounds == 100, "01", Ref(prefix+ID), "Incorrect E0 dataset")
     audit.require(e0.manifest["source_manifest_sha256"] == file_hash(original / "manifest.json"),
                   "09", Ref(prefix+ID), "E0 source manifest hash mismatch")
-    root_paths = (archive, *archive.rglob("*"))
-    for path in root_paths:
-        audit.require((path.stat().st_mode & 0o222) == 0, "01", Ref(path.relative_to(audit.root).as_posix()),
-                      "E0 copy must be read-only")
     root_config = repo / "config/baseline.yaml"
     audit.require(original_manifest["config_sha256"] == file_hash(root_config), "09", Ref("config/baseline.yaml"),
                   "Tracked and original E0 configuration differ")
