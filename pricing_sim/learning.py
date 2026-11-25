@@ -132,6 +132,7 @@ class PricingPipeline:
         if self.reward_mode == "censoring_aware":
             forest = SurvivalForest(a["survival_forest_trees"], a["survival_min_leaf"], self.seed+7)
             forest.fit(data)
+            self._demand_forest = forest
             self.reward, sd = surrogate_reward(data, forest,
                 self.config["simulation"]["stockout_cost"], a["survival_mode"])
             self.diagnostics["survival"] = sd
@@ -148,6 +149,7 @@ class PricingPipeline:
         folds = KFold(n_splits=a["cross_fitting_folds"], shuffle=True, random_state=self.seed+23)
         qx = _q_features(data)
         state = _state(data)
+        self._q_models = []
         for fold, (train, held) in enumerate(folds.split(qx)):
             q_model = MLPRegressor(hidden_layer_sizes=tuple(a["q_hidden"]), solver="adam",
                                    max_iter=a["q_max_iter"], random_state=self.seed+fold+47,
@@ -155,6 +157,7 @@ class PricingPipeline:
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore", ConvergenceWarning)
                 q_model.fit(qx[train], self.reward[train])
+            self._q_models.append(q_model)
             q_logged[held] = q_model.predict(qx[held])
             residual[held] = self.reward[held]-q_logged[held]
             batch = 100
@@ -203,3 +206,20 @@ class PricingPipeline:
         x = np.column_stack([x1.ravel(), x2.ravel(), inventory.ravel()/10.])
         out = self.policy.forward(x)[-1][:, 0]
         return (1/(1+np.exp(-np.clip(out, -30, 30)))).reshape(x1.shape)
+
+    def predict_q(self, observed):
+        """Mean prediction from the fitted Q folds on new logged prices."""
+        features = _q_features(observed)
+        return np.mean([model.predict(features) for model in self._q_models], axis=0)
+
+    def predict_censored_demand(self, observed):
+        """Apply the fitted recovery rule to new observations with delta=0."""
+        censored = observed.loc[observed.delta == 0]
+        sales = censored.sales.to_numpy(float)
+        if self.reward_mode == "naive" or censored.empty:
+            return sales
+        # Cost 1 converts the same surrogate reward directly into estimated excess units.
+        reward, _ = surrogate_reward(
+            censored, self._demand_forest, 1.0, self.config["algorithm"]["survival_mode"]
+        )
+        return sales + (censored.price.to_numpy() * sales - reward)

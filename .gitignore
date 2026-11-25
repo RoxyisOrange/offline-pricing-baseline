@@ -5,3 +5,4 @@ __pycache__/
 .DS_Store
 results/*
 !results/baseline-2026-11-25/
+/datasets/
