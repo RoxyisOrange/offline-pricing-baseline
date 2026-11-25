@@ -22,7 +22,9 @@ pricing_sim/survival.py              Python 生存近似
 pricing_sim/learning.py              密度、Q、策略和 Oracle 模型
 pricing_sim/evaluation.py            E0 的冻结评价接口
 pricing_sim/experiment_data.py       E1–E4 的场景表、公共生成器与数据读取器
+pricing_sim/data_release.py          CSV 导出、校准和逐文件校验记录
 pricing_sim/experiment_evaluation.py E1–E4 的公共评价函数
+data_loader.py                       全组共用读取入口
 generate_data.py                     生成 E0 或选定的 E1–E4 数据
 train.py                             读取冻结数据，训练 Naive 与 DR
 verify_baseline.py                   核对数据与存档结果
@@ -56,17 +58,18 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python trai
 
 ## E1–E4 共用数据
 
-全组由同一人导出一份数据，其他成员读取相同的目录和 `manifest.json`。生成器版本 `2.0.0` 按固定总体中位数 `x1²+x2² ≤ 2/π` 分组，训练和测试每轮均分层抽取 Low、High 各 1000 条。Poisson 与 NB 的条件需求均值都是 `1+λ`，NB 离散参数 `k=2`。同一市场和轮次下的场景共享特征、历史价格、需求抽样和库存分位数。Poisson 与 NB 共用特征、历史价格及库存分位数，各自抽样需求。
+全组由同一人导出一份数据，其他成员读取同一份 `data/` 发布目录。生成器版本 `2.0.0` 按固定总体中位数 `x1²+x2² ≤ 2/π` 分组，训练和测试每轮均分层抽取 Low、High 各 1000 条。Poisson 与 NB 的条件需求均值都是 `1+λ`，NB 离散参数 `k=2`。同一市场和轮次下的场景共享特征、历史价格、需求抽样和库存分位数。Poisson 与 NB 共用特征、历史价格及库存分位数，各自抽样需求。
 
 历史库存用独立 Sobol 样本校准组内平均截断率，只调整库存正态的均值参数。库存方差为 2，负的连续值重抽，保留零库存，`sales=min(D,Y)`，`delta=1(sales<Y)`。每轮只有一份共用的未来特征与库存，测试库存沿用 E0 的机制（均值参数 6、方差 2）。校准、分层抽样及 NB 市场是本组的扩展设定。
 
 ```bash
 .venv/bin/python generate_data.py --self-test --rounds 100
 .venv/bin/python generate_data.py --experiment all --rounds 5 --output datasets/group-pilot
-.venv/bin/python generate_data.py --experiment all --rounds 100 --output datasets/group-v2
+.venv/bin/python generate_data.py --experiment all --rounds 100 --output data
+.venv/bin/python generate_data.py --export-e0
 ```
 
-`--experiment` 接受 `E1`、`E2`、`E3`、`E4.1`、`E4.2` 及 `all`。小范围检查也可用 `--scenarios S01 S16`。正式的 `all` 包含 13 个 Poisson 场景、5 个 NB 场景和 100 份共享测试集。生成时指定新目录，导出完成后保存生成器版本、种子、场景和逐文件 SHA-256。
+`--experiment` 接受 `E1`、`E2`、`E3`、`E4.1`、`E4.2` 及 `all`。小范围检查也可用 `--scenarios S01 S16`。正式的 `all` 包含 13 个 Poisson 场景、5 个 NB 场景和 100 份共享测试集。首次发布可写入已有 `v1/` 的 `data/`，之后如需另起版本，指定新目录。导出记录生成器版本、种子、场景和逐文件 SHA-256。
 
 | 实验 | 使用的场景 |
 | --- | --- |
@@ -76,7 +79,19 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python trai
 | E4.1 | 复用 S01、S03、S05、S07、S09 |
 | E4.2 | S14–S18 |
 
-例如 `S01` 对应 `poisson/10_10/train_001.csv`，`S16` 对应 `negative_binomial/90_90/train_001.csv`。两者共用 `shared_test/test_001.csv`。`actual_censoring_rates.csv` 保存每组及总体的实际截断率、库存均值参数和零库存比例。`evaluation_only/` 保存核验用训练真值，以及用于需求误差和 Q 误差的测试观测。两种市场的测试观测各自使用独立于训练的需求抽样，共享测试的特征与库存。
+例如 S01 对应 `data/train/poisson/S01_L10_H10/train_001.csv`，S16 对应 `data/train/negative_binomial/S16_L90_H90/train_001.csv`。两者共用 `data/test/shared/test_001.csv`。`data/test/diagnostics/` 保存两个市场各自的诊断观测，`data/ground_truth/` 保存用于评价和核验的训练真值。
+
+`data/metadata/` 记录场景、实验映射、参数、校准结果、逐轮质量和 SHA-256。数据目录随数据发布流程单独分发。E0 的同格式只读 CSV 副本位于 `data/e0_frozen/`，其中的分组标签从 E0 原特征计算，原样本 ID、行顺序及数值都沿用 `data/v1`。
+
+```python
+from data_loader import get_scenarios, load_test, load_train
+
+scenarios = get_scenarios("E2")
+train = load_train("S07", rep=1)
+test = load_test(rep=1)
+legacy_train = load_train("E0", rep=1)
+legacy_test = load_test(rep=1, scenario_id="E0")
+```
 
 ## E1–E4 共用训练与评价
 

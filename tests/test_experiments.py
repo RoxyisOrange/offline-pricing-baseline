@@ -13,6 +13,8 @@ from pricing_sim.experiment_evaluation import (Predictions, evaluate_fitted_mode
 @pytest.fixture(scope="module")
 def data(tmp_path_factory):
     root = tmp_path_factory.mktemp("experiments") / "rounds"
+    (root / "v1").mkdir(parents=True)
+    (root / "v1" / "kept.txt").write_text("original E0")
     export_data(root, rounds=1, scenarios=("S01", "S05", "S16"))
     return ExperimentData(root)
 
@@ -54,7 +56,7 @@ def test_profit_and_conditional_demand_match_distribution_enumeration(market):
 
 
 def test_export_is_write_once_and_loader_requires_no_truth(data):
-    truth = data.root / "evaluation_only/negative_binomial/90_90/truth_001.csv"
+    truth = data.root / "ground_truth/negative_binomial/S16_L90_H90/truth_001.csv"
     withheld = truth.with_suffix(".withheld")
     truth.rename(withheld)
     try:
@@ -66,7 +68,7 @@ def test_export_is_write_once_and_loader_requires_no_truth(data):
     with pytest.raises(FileExistsError):
         export_data(data.root, rounds=1, scenarios=("S16",))
 
-    path = data.root / "negative_binomial/90_90/train_001.csv"
+    path = data.root / "train/negative_binomial/S16_L90_H90/train_001.csv"
     original = path.read_bytes()
     try:
         path.write_bytes(original + b"\n")
@@ -74,6 +76,21 @@ def test_export_is_write_once_and_loader_requires_no_truth(data):
             data.training("S16", 1)
     finally:
         path.write_bytes(original)
+
+
+def test_release_preserves_legacy_data_and_records_quality(data):
+    from data_loader import get_scenarios, load_test, load_train
+
+    assert (data.root / "v1" / "kept.txt").read_text() == "original E0"
+    assert get_scenarios("E2") == ["S03", "S06", "S07", "S08", "S09"]
+    assert get_scenarios("E0") == ["E0"]
+    pd.testing.assert_frame_equal(load_train("S16", 1, data_dir=data.root), data.training("S16", 1))
+    pd.testing.assert_frame_equal(load_test(1, data_dir=data.root), data.test(1))
+    assert (data.root / "metadata" / "checksums.sha256").is_file()
+    quality = pd.read_csv(data.root / "metadata" / "data_quality_report.csv")
+    assert quality.n_low.eq(1000).all() and quality.n_high.eq(1000).all()
+    assert quality.missing_values.eq(0).all()
+    assert set(quality["round"]) == {1}
 
 
 def test_evaluation_uses_shared_context_but_market_specific_truth(data):

@@ -11,7 +11,6 @@ from types import MappingProxyType
 
 import numpy as np
 import pandas as pd
-import scipy
 from scipy.optimize import brentq
 from scipy.stats import nbinom, poisson, qmc, truncnorm
 
@@ -317,76 +316,50 @@ def self_test(rounds=N_ROUNDS):
     return report
 
 
-def export_data(output: Path, rounds: int, scenarios=tuple(SCENARIOS)) -> dict:
+def export_data(output: Path, rounds: int, scenarios=tuple(SCENARIOS), *, code_revision=None) -> dict:
     """Freeze observations, shared tests and separately stored evaluation data."""
-    rounds = _check_round(rounds)
-    scenarios = tuple(dict.fromkeys(scenarios))
-    if not scenarios or set(scenarios).difference(SCENARIOS):
-        raise ValueError("Choose at least one registered scenario")
-    output = Path(output)
-    output.mkdir(parents=True, exist_ok=False)
-    files, statistics = {}, []
+    from .data_release import export_experiments
 
-    def write(relative: Path, frame: pd.DataFrame):
-        path = output / relative
-        path.parent.mkdir(parents=True, exist_ok=True)
-        frame.to_csv(path, index=False, float_format="%.17g")
-        files[relative.as_posix()] = sha256(path)
-
-    markets = sorted({SCENARIOS[sid].market for sid in scenarios})
-    for round_id in range(1, rounds + 1):
-        write(Path("shared_test") / f"test_{round_id:03d}.csv", generate_test(round_id))
-        for market in markets:
-            write(Path("evaluation_only", market, f"diagnostic_{round_id:03d}.csv"),
-                  generate_diagnostic_test(round_id, market))
-        for sid in scenarios:
-            sample = generate_train(sid, round_id)
-            directory = SCENARIOS[sid].directory
-            write(directory / f"train_{round_id:03d}.csv", sample.observed)
-            write(Path("evaluation_only") / directory / f"truth_{round_id:03d}.csv", sample.truth)
-            statistics.append(sample.statistics)
-    write(Path("actual_censoring_rates.csv"), pd.DataFrame(statistics))
-
-    manifest = {
-        "version": VERSION, "generator_sha256": sha256(Path(__file__)), "rounds": rounds,
-        **_DESIGN,
-        "scenarios": {
-            sid: {"market": SCENARIOS[sid].market, "directory": SCENARIOS[sid].directory.as_posix(),
-                  "low_target_pct": SCENARIOS[sid].low_target_pct,
-                  "high_target_pct": SCENARIOS[sid].high_target_pct}
-            for sid in scenarios
-        },
-        "experiments": dict(EXPERIMENTS),
-        "versions": {"numpy": np.__version__, "pandas": pd.__version__, "scipy": scipy.__version__},
-        "files": files,
-    }
-    # A manifest only becomes visible after the entire export is complete.
-    temporary = output / "manifest.tmp"
-    temporary.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    temporary.replace(output / "manifest.json")
-    return manifest
+    return export_experiments(output, rounds, scenarios, code_revision=code_revision)
 
 
 class ExperimentData:
     """Check the pinned data version and load just the tables a caller needs."""
 
     def __init__(self, root: Path):
+        from .data_release import GENERATION_CONFIG, read_release, scenario_folder
+
         self.root = Path(root)
-        raw = (self.root / "manifest.json").read_bytes()
-        self.manifest = json.loads(raw)
-        self.manifest_sha256 = hashlib.sha256(raw).hexdigest()
-        if self.manifest["version"] != VERSION:
-            raise ValueError(f"Expected experiment data generator {VERSION}")
-        for key, value in _DESIGN.items():
-            if self.manifest.get(key) != value:
-                raise ValueError(f"Frozen experiment parameter differs: {key}")
+        self.release_layout = (self.root / GENERATION_CONFIG).is_file()
+        if self.release_layout:
+            self.manifest, self.manifest_sha256 = read_release(self.root)
+        else:
+            raw = (self.root / "manifest.json").read_bytes()
+            self.manifest = json.loads(raw)
+            self.manifest_sha256 = hashlib.sha256(raw).hexdigest()
+        is_e0 = self.release_layout and self.manifest.get("dataset") == "E0"
+        expected_version = "baseline-v1" if is_e0 else VERSION
+        if self.manifest["version"] != expected_version:
+            raise ValueError(f"Expected experiment data version {expected_version}")
+        if not is_e0:
+            for key, value in _DESIGN.items():
+                if self.manifest.get(key) != value:
+                    raise ValueError(f"Frozen experiment parameter differs: {key}")
         self.rounds = _check_round(self.manifest["rounds"])
         self.scenarios = tuple(self.manifest["scenarios"])
+        self.n_train, self.n_test = self.manifest["n_train"], self.manifest["n_test"]
+        self._scenario_dirs = {}
+        if is_e0 and self.scenarios != ("E0",):
+            raise ValueError("The E0 archive must contain only E0")
         for sid, row in self.manifest["scenarios"].items():
-            spec = SCENARIOS[sid]
+            spec = None if is_e0 else SCENARIOS[sid]
+            market, low, high = ("poisson", None, None) if is_e0 else (
+                spec.market, spec.low_target_pct, spec.high_target_pct)
+            directory = scenario_folder(sid) if self.release_layout else spec.directory
             if (row["market"], row["low_target_pct"], row["high_target_pct"], row["directory"]) != (
-                    spec.market, spec.low_target_pct, spec.high_target_pct, spec.directory.as_posix()):
+                    market, low, high, directory.as_posix()):
                 raise ValueError(f"Scenario settings differ for {sid}")
+            self._scenario_dirs[sid] = Path("train") / directory if self.release_layout else directory
         self._statistics = None
 
     def _read(self, relative: Path, columns=None, size=None):
@@ -403,23 +376,33 @@ class ExperimentData:
         round_id = _check_round(round_id, self.rounds)
         if scenario_id not in self.scenarios:
             raise ValueError(f"Scenario {scenario_id} absent from export")
-        path = SCENARIOS[scenario_id].directory / f"train_{round_id:03d}.csv"
-        return self._read(path, TRAIN_COLUMNS, N_TRAIN)[OBSERVED_COLUMNS]
+        path = self._scenario_dirs[scenario_id] / f"train_{round_id:03d}.csv"
+        return self._read(path, TRAIN_COLUMNS, self.n_train)[OBSERVED_COLUMNS]
 
     def test(self, round_id: int) -> pd.DataFrame:
         round_id = _check_round(round_id, self.rounds)
-        return self._read(Path("shared_test", f"test_{round_id:03d}.csv"), TEST_COLUMNS, N_TEST)
+        directory = "test/shared" if self.release_layout else "shared_test"
+        return self._read(Path(directory, f"test_{round_id:03d}.csv"), TEST_COLUMNS, self.n_test)
 
     def diagnostics(self, round_id: int, market: str) -> pd.DataFrame:
         round_id = _check_round(round_id, self.rounds)
         if market not in MARKETS:
             raise ValueError(f"Unknown market {market!r}")
-        path = Path("evaluation_only", market, f"diagnostic_{round_id:03d}.csv")
-        return self._read(path, TRAIN_COLUMNS, N_TEST)
+        directory = "test/diagnostics" if self.release_layout else "evaluation_only"
+        path = Path(directory, market, f"diagnostic_{round_id:03d}.csv")
+        return self._read(path, TRAIN_COLUMNS, self.n_test)
 
     def rates(self, scenario_id: str, round_id: int) -> dict:
         if self._statistics is None:
-            self._statistics = self._read(Path("actual_censoring_rates.csv")).set_index(
-                ["scenario_id", "round_id"], verify_integrity=True)
+            if self.release_layout:
+                from .data_release import QUALITY_REPORT
+
+                stats = self._read(QUALITY_REPORT).rename(columns={
+                    "round": "round_id", "actual_low_rate": "r_low_actual",
+                    "actual_high_rate": "r_high_actual", "actual_rate": "r_actual",
+                })
+            else:
+                stats = self._read(Path("actual_censoring_rates.csv"))
+            self._statistics = stats.set_index(["scenario_id", "round_id"], verify_integrity=True)
         row = self._statistics.loc[(scenario_id, round_id)]
         return {key: float(row[key]) for key in ("r_low_actual", "r_high_actual", "r_actual")}

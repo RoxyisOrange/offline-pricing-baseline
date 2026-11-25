@@ -6,3 +6,10 @@ __pycache__/
 results/*
 !results/baseline-2026-11-25/
 /datasets/
+/data/train/
+/data/test/
+/data/ground_truth/
+/data/metadata/
+/data/e0_frozen/
+/data/README.md
+/data/.release-installing/
