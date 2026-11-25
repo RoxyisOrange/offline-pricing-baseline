@@ -1,3 +1,7 @@
+import json
+import shutil
+import sys
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -161,20 +165,45 @@ def test_aggregate_ratios_and_contrasts_pair_rounds():
     assert contrast["value"] == pytest.approx(.05)
 
 
-def test_shared_runner_uses_observed_only_and_resumes(data, tmp_path, monkeypatch):
+def test_shared_fit_seeds_match_every_archived_round():
     import train
+
+    _, pinned = train._shared_training_inputs()
+    original_manifest = train.ROOT / "data" / "v1" / "manifest.json"
+    legacy = json.loads(original_manifest.read_text())
+    assert pinned["fit_seeds"] == [row["fit_seed"] for row in legacy["runs"]]
+    assert pinned["config_sha256"] == legacy["config_sha256"]
+    assert pinned["source_manifest_sha256"] == train.sha256(original_manifest)
+
+
+def test_shared_runner_defaults_to_csv_without_e0_and_resumes(data, tmp_path, monkeypatch):
+    import train
+
+    checkout = tmp_path / "checkout"
+    shutil.copytree(train.ROOT / "config", checkout / "config")
+    for directory in ("train", "test", "metadata"):
+        shutil.copytree(data.root / directory, checkout / "data" / directory)
+    assert not (checkout / "data" / "v1").exists()
+    assert not (checkout / "data" / "e0_frozen").exists()
+    assert not (checkout / "data" / "ground_truth").exists()
+    expected_train = data.training("S16", 1)
+    expected_test = data.test(1)
 
     class PolicyStub:
         def __init__(self, config, mode, seed):
             self.density_cache = object()
             assert config["algorithm"]["q_hidden"] == [100, 100]
+            assert seed == 2905316461
 
         def fit(self, observed, density_cache=None):
-            assert list(observed) == ["sample_id", "x1", "x2", "price", "inventory", "sales", "delta"]
+            pd.testing.assert_frame_equal(observed, expected_train)
             self.fits.append(observed.copy())
             return self
 
         def predict_price(self, x1, x2, inventory):
+            np.testing.assert_array_equal(x1, expected_test.x1)
+            np.testing.assert_array_equal(x2, expected_test.x2)
+            np.testing.assert_array_equal(inventory, expected_test.inventory)
             return np.full(len(x1), .5)
 
         def predict_censored_demand(self, observed):
@@ -184,12 +213,16 @@ def test_shared_runner_uses_observed_only_and_resumes(data, tmp_path, monkeypatc
             return observed.price.to_numpy() * observed.sales.to_numpy()
 
     PolicyStub.fits = []
+    monkeypatch.setattr(train, "ROOT", checkout)
     monkeypatch.setattr(train, "PricingPipeline", PolicyStub)
     output = tmp_path / "results"
-    train.train_shared(data.root, output, ["S16"], limit=1, resume=False)
+    command = ["train.py", "--scenarios", "S16", "--limit", "1", "--output", str(output)]
+    monkeypatch.setattr(sys, "argv", command)
+    train.main()
     assert len(PolicyStub.fits) == 2
     pd.testing.assert_frame_equal(*PolicyStub.fits)
-    train.train_shared(data.root, output, ["S16"], limit=1, resume=True)
+    monkeypatch.setattr(sys, "argv", command + ["--resume"])
+    train.main()
     assert len(PolicyStub.fits) == 2
     rows = pd.read_csv(output / "metrics_per_run.csv")
     assert rows.dataset_sha256.unique().tolist() == [data.manifest_sha256]

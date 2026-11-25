@@ -16,6 +16,7 @@ DR 比 Naive 高 0.6359 个百分点。逐次配对利润比差的 95% 区间约
 
 ```text
 config/baseline.yaml                 固定实验配置与种子
+config/fit_seeds.json                各轮训练使用的 100 个已冻结拟合种子
 pricing_sim/simulation.py            数据生成规则及真实期望利润
 pricing_sim/data_store.py            冻结、读取和校验数据
 pricing_sim/survival.py              Python 生存近似
@@ -28,12 +29,12 @@ data_loader.py                       全组共用读取入口
 generate_data.py                     生成 E0 或选定的 E1–E4 数据
 train.py                             读取冻结数据，训练 Naive 与 DR
 verify_baseline.py                   核对数据与存档结果
-data/v1/                             100 组数据、统计及 SHA-256 清单
+data/v1/                             E0 原始归档及 SHA-256 清单
 results/baseline-2026-11-25/         100 次存档结果
 tests/                                核心不变量测试
 ```
 
-`data/v1/runs/run_XXX/` 下每组有 `observed_train.csv.gz`、`observed_test.csv.gz`、`truth_train.csv.gz`、`truth_test.csv.gz`。模型入口默认只加载观测数据，真实需求只供检查。`manifest.json` 记录种子和全部 400 个数据文件的 SHA-256；`statistics.csv` 给出各组截断率、平局率等。库存生成使用均值 6、方差 2 的正态变量向下取整；未截断定义固定为 `D < Y`。
+`data/v1/runs/run_XXX/` 是 E0 的原始归档。`manifest.json` 记录种子和全部 400 个数据文件的 SHA-256，`statistics.csv` 给出各组截断率、平局率等。E0 可用 `verify_baseline.py` 核验历史结果，平时的场景训练读取后面的共享 CSV 发布目录。
 
 ## 运行
 
@@ -46,13 +47,13 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m p
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python verify_baseline.py
 ```
 
-只跑第 0 组以检查训练流程：
+需要复跑 E0 时，显式指定 `--replay-e0`。以下命令从 `data/e0_frozen/` 读取第一轮，并把新结果写入指定目录。
 
 ```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python train.py --output results/local-smoke --limit 1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python train.py --replay-e0 --limit 1 --output results/e0-replay
 ```
 
-运行 100 组时省略 `--limit` 并指定新的输出目录；中断后以相同参数加 `--resume`。脚本拒绝覆盖存档结果。数据生成器已经用于生成 `data/v1`，平时训练不需要调用；再次运行默认生成命令会因目录存在而失败。未来修改数据规则时应建立 `data/v2`，保留旧版。
+复跑 100 轮时省略 `--limit`。旧版 E0 数据包仍可用 `--replay-e0 --data data/v1` 显式读取。输出请选择新目录，中断后可在相同参数下加 `--resume`。
 
 本地 Git 提交和标签 `baseline-v1` 标识本基线。GitHub CI 检查测试、存档结果和相对基线标签的数据与核心代码差异。若只拿到不含 `.git` 的源码 ZIP，可使用同时交付的 Git bundle 恢复完整 Git 历史。
 
@@ -84,22 +85,23 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python trai
 `data/metadata/` 记录场景、实验映射、参数、校准结果、逐轮质量和 SHA-256。数据目录随数据发布流程单独分发。E0 的同格式只读 CSV 副本位于 `data/e0_frozen/`，其中的分组标签从 E0 原特征计算，原样本 ID、行顺序及数值都沿用 `data/v1`。
 
 ```python
-from data_loader import get_scenarios, load_test, load_train
+from data_loader import get_scenarios, load_test, load_train, open_dataset
 
 scenarios = get_scenarios("E2")
 train = load_train("S07", rep=1)
 test = load_test(rep=1)
 legacy_train = load_train("E0", rep=1)
 legacy_test = load_test(rep=1, scenario_id="E0")
+shared_data = open_dataset()  # 多轮实验可复用它，并传给公共评价函数
 ```
 
 ## E1–E4 共用训练与评价
 
-用以下命令选取场景，读取导出的 5 轮数据并调用已有的 Naive 和 DR。训练只接触 `ExperimentData.training(scenario_id, round_id)` 返回的 7 个观测字段。训练配置与每轮拟合种子来自已冻结的 E0 配置和清单。
+训练默认读取正式发布的 `data/`。指定 `--scenarios` 可按场景选取训练表，并用同一轮的 `data/test/shared/` 做预测。也可用 `--experiment E2` 选取一组场景。重叠场景复用同一结果。训练只接触公共读取器返回的 7 个观测字段。配置和拟合种子分别读取 `config/baseline.yaml` 与 `config/fit_seeds.json`，这些值已和原 E0 训练配置及 100 个拟合种子核对。
 
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python train.py \
-  --data datasets/group-pilot --scenarios S01 S16 --limit 5 --output results/group-pilot
+  --scenarios S05 S16 --limit 5 --output results/group-pilot
 ```
 
 脚本输出 `metrics_per_run.csv` 与 `metrics_summary.csv`，按 `scenario_id`、`market`、`round_id`、`method` 和 `group` 汇总。中断后加 `--resume` 复用同批输入的已完成轮次。
