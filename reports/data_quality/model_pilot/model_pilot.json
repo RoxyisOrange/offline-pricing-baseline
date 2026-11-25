@@ -1,0 +1,27 @@
+{
+  "dataset_sha256": "a896f4bd54d582eb3a55c472fc2cba8597b0979bdc2e47cb7f054d78c2355dd3",
+  "model_fingerprint": "68ff725f47b1aa5ac41a466d6719bb43b4b38217ba5d2d9b965c780db0b4461b",
+  "rounds": 5,
+  "scenarios": [
+    "S05",
+    "S16"
+  ],
+  "completed": 10,
+  "failures": [],
+  "status": "PASS",
+  "rsf_discrete_boundary": {
+    "status": "WARNING",
+    "current": 3.3922111911773327,
+    "correct_conditional_mean": 2.581976706869326,
+    "description": "H(Y) denominator, Y in the risk set at a same-time event, and tail summation through the observed sales cap require a discrete review."
+  },
+  "censored_poisson": {
+    "status": "NOT TESTED",
+    "reason": "No fitted CP implementation in this repo"
+  },
+  "evidence_sha256": {
+    "model_pilot_per_run.csv": "0344e35a6f5bf737685f7210d9085e10b273b96e84211176066ce6add46d3137",
+    "model_pilot_metrics.csv": "ec3097e88e1ea5da4bbdf5b894f860f0ebb12cd6fbb1a76e608aaa314b84e77a",
+    "model_pilot.log": "890b09318a8a7f55fbc2a31accb99f9489ee63fbf252c22ca6849e51b6861d3e"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "data_path": "/Users/Developer/pricing-python-baseline/data",
+  "started_utc": "2026-11-25T18:28:28.277314+00:00",
+  "completed_utc": "2026-11-25T18:29:04.567623+00:00",
+  "dataset_sha256": "a896f4bd54d582eb3a55c472fc2cba8597b0979bdc2e47cb7f054d78c2355dd3",
+  "e0_archive_sha256": "33edd40cf7245e23d59d1ef917f96cc841439ccee663f8e380ac472c311e5410",
+  "checks": {
+    "01": {
+      "label": "目录、完整性和 E0 冻结",
+      "status": "PASS"
+    },
+    "02": {
+      "label": "Schema 和逐行合法性",
+      "status": "PASS"
+    },
+    "03": {
+      "label": "分布、固定参数和库存校准",
+      "status": "PASS"
+    },
+    "04": {
+      "label": "场景与截断率",
+      "status": "PASS"
+    },
+    "05": {
+      "label": "配对、控制变量和独立随机流",
+      "status": "PASS"
+    },
+    "06": {
+      "label": "真值、共享测试集与训练隔离",
+      "status": "PASS"
+    },
+    "07": {
+      "label": "极端场景和库存覆盖",
+      "status": "WARNING"
+    },
+    "08": {
+      "label": "公共评价函数独立数值核对",
+      "status": "WARNING"
+    },
+    "09": {
+      "label": "版本、完整哈希和临时复现",
+      "status": "PASS"
+    },
+    "pilot": {
+      "label": "Naive 和 DR 真实试跑",
+      "status": "PASS"
+    },
+    "rsf": {
+      "label": "RSF 整数截断边界",
+      "status": "WARNING"
+    },
+    "cp": {
+      "label": "Censored Poisson",
+      "status": "NOT TESTED"
+    },
+    "double_check": {
+      "label": "报告数据一致性复核",
+      "status": "PASS"
+    }
+  },
+  "official_files": 3900,
+  "official_physical_rows": 7800000,
+  "official_main_rows": 3800000,
+  "files_by_type": {
+    "shared_test": 100,
+    "test_diagnostics": 200,
+    "train": 1800,
+    "training_truth": 1800,
+    "e0_original_gzip": 400,
+    "e0_csv_copy": 400
+  },
+  "rows_by_type": {
+    "shared_test": 200000,
+    "test_diagnostics": 400000,
+    "train": 3600000,
+    "training_truth": 3600000,
+    "e0_original_gzip": 800000,
+    "e0_csv_copy": 800000
+  },
+  "checksums_verified": 4312,
+  "checksums_passed": 4312,
+  "official_row_details": {
+    "ties": 388561,
+    "zero_stock": 187473
+  },
+  "max_censoring_deviation": {
+    "scenario_id": "S02",
+    "group": "high",
+    "signed_pp": -0.26800000000000157,
+    "target_rate": 0.3,
+    "actual_rate": 0.29732
+  },
+  "issue_count": 9,
+  "failed_issues": 0,
+  "warned_issues": 9,
+  "training_contract": {
+    "public_fields": [
+      "sample_id",
+      "x1",
+      "x2",
+      "price",
+      "inventory",
+      "sales",
+      "delta"
+    ],
+    "cases": 3,
+    "reads_training_file_only": true
+  },
+  "numeric_evaluation": {
+    "edge_cases": 22,
+    "impossible_conditions": 2,
+    "oracle_grid_rows": 16,
+    "e0_oracle_grid_rows": 4,
+    "public_evaluation_calls": 4,
+    "max_profit_error": 6.661338147750939e-16,
+    "max_censored_mean_error": 1.2860823517257813e-12,
+    "max_oracle_profit_error": 6.661338147750939e-16,
+    "release_conditional_targets": {
+      "poisson": {
+        "n_censored": 70113,
+        "min_lambda": 0.18866841035975934,
+        "max_inventory": 10,
+        "max_abs_error": 1.7763568394002505e-14
+      },
+      "negative_binomial": {
+        "n_censored": 63619,
+        "min_lambda": 0.18662475444579485,
+        "max_inventory": 11,
+        "max_abs_error": 1.7763568394002505e-14
+      }
+    },
+    "off_release_warnings": [
+      {
+        "market": "poisson",
+        "lambda": 9.99999993922529e-09,
+        "inventory": 60,
+        "reference": 60.000000000166665,
+        "actual": null,
+        "reason": "Positive tail underflows in the public evaluator: The censored demand event has zero probability"
+      },
+      {
+        "market": "negative_binomial",
+        "lambda": 9.99999993922529e-09,
+        "inventory": 3,
+        "reference": 3.0000000066666663,
+        "actual": 2.999999996666667,
+        "abs_error": 9.99999949513608e-09,
+        "reason": "Small positive NB rate loses tail precision and yields a mean below inventory"
+      },
+      {
+        "market": "negative_binomial",
+        "lambda": 9.99999993922529e-09,
+        "inventory": 60,
+        "reference": 60.00000000508333,
+        "actual": null,
+        "reason": "Positive tail underflows in the public evaluator: The censored demand event has zero probability"
+      }
+    ]
+  },
+  "provenance": {
+    "code_revision": "51dd13cab453e98593f4df8f441152888c3eddab",
+    "versions": {
+      "python": "3.11.7",
+      "numpy": "1.26.4",
+      "pandas": "2.1.4",
+      "scipy": "1.11.4"
+    },
+    "reproduced_byte_identical_files": 22,
+    "scenario_ids": [
+      "S01",
+      "S05",
+      "S16",
+      "S18"
+    ],
+    "replications": [
+      1,
+      2
+    ]
+  },
+  "model_pilot": {
+    "dataset_sha256": "a896f4bd54d582eb3a55c472fc2cba8597b0979bdc2e47cb7f054d78c2355dd3",
+    "model_fingerprint": "68ff725f47b1aa5ac41a466d6719bb43b4b38217ba5d2d9b965c780db0b4461b",
+    "rounds": 5,
+    "scenarios": [
+      "S05",
+      "S16"
+    ],
+    "completed": 10,
+    "failures": [],
+    "status": "PASS",
+    "rsf_discrete_boundary": {
+      "status": "WARNING",
+      "current": 3.3922111911773327,
+      "correct_conditional_mean": 2.581976706869326,
+      "description": "H(Y) denominator, Y in the risk set at a same-time event, and tail summation through the observed sales cap require a discrete review."
+    },
+    "censored_poisson": {
+      "status": "NOT TESTED",
+      "reason": "No fitted CP implementation in this repo"
+    },
+    "evidence_sha256": {
+      "model_pilot_per_run.csv": "0344e35a6f5bf737685f7210d9085e10b273b96e84211176066ce6add46d3137",
+      "model_pilot_metrics.csv": "ec3097e88e1ea5da4bbdf5b894f860f0ebb12cd6fbb1a76e608aaa314b84e77a",
+      "model_pilot.log": "890b09318a8a7f55fbc2a31accb99f9489ee63fbf252c22ca6849e51b6861d3e"
+    },
+    "verified_method_fits": 20,
+    "metric_rows": 90,
+    "zero_rows": {
+      "S05": {
+        "min": 400,
+        "max": 417
+      },
+      "S16": {
+        "min": 599,
+        "max": 643
+      }
+    },
+    "price_min": 0.6655561692365426,
+    "price_max": 0.9998607918559304,
+    "elapsed_seconds": 103.78000000000002
+  },
+  "figures": [
+    "censoring_by_round.png",
+    "inventory_distribution.png",
+    "inventory_coverage.png"
+  ],
+  "double_check": {
+    "scenario_rows": 18,
+    "round_rows": 1800,
+    "coverage_rows": 54,
+    "checksum_rows": 4312,
+    "max_deviation_pp": 0.26800000000000157
+  },
+  "dataset_release_readiness": "READY",
+  "model_experiment_readiness": "PENDING"
+}

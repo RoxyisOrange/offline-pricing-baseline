@@ -1,0 +1,44 @@
+2026-11-26 02:28:28,277 INFO Fresh official-release audit: /Users/Developer/pricing-python-baseline/data
+2026-11-26 02:28:28,280 INFO Comparing physical file inventories with frozen design
+2026-11-26 02:28:28,281 INFO Begin 01 – file inventory
+2026-11-26 02:28:28,346 INFO Completed 01 – file inventory
+2026-11-26 02:28:28,346 INFO Begin 09 – official and E0 checksum catalogs
+2026-11-26 02:28:29,538 INFO Completed 09 – official and E0 checksum catalogs
+2026-11-26 02:28:29,539 INFO Official release: a896f4bd54d582eb3a55c472fc2cba8597b0979bdc2e47cb7f054d78c2355dd3; E0 CSV archive: 33edd40cf7245e23d59d1ef917f96cc841439ccee663f8e380ac472c311e5410
+2026-11-26 02:28:29,539 INFO Begin 03 – metadata/generation_config.json
+2026-11-26 02:28:29,557 INFO Completed 03 – metadata/generation_config.json
+2026-11-26 02:28:29,581 INFO Begin 02/04/05/06/07 – row schema, RNG replay, overlaps, coverage and censoring for all 3900 CSVs
+2026-11-26 02:28:34,480 INFO Scanned 25/100 scenario rounds
+2026-11-26 02:28:39,177 INFO Scanned 50/100 scenario rounds
+2026-11-26 02:28:45,291 INFO Scanned 75/100 scenario rounds
+2026-11-26 02:28:50,119 INFO Scanned 100/100 scenario rounds
+2026-11-26 02:28:50,141 INFO Completed 02/04/05/06/07 – row schema, RNG replay, overlaps, coverage and censoring for all 3900 CSVs
+2026-11-26 02:28:50,141 INFO Begin 01 – frozen E0 and original results
+2026-11-26 02:28:56,655 INFO E0 historic verifier: Verified 100 data pairs and 200,000 predictions; Naive 95.353457%, DR 95.989356%
+2026-11-26 02:28:56,657 INFO Completed 01 – frozen E0 and original results
+2026-11-26 02:28:56,657 INFO Begin 06 – public loader
+2026-11-26 02:28:56,672 INFO Completed 06 – public loader
+2026-11-26 02:28:56,673 INFO Begin 06 – seven-field training input contract
+2026-11-26 02:28:56,688 INFO Completed 06 – seven-field training input contract
+2026-11-26 02:28:56,688 INFO Begin 08 – independent discrete probability sums
+2026-11-26 02:29:01,096 INFO Completed 08 – independent discrete probability sums
+2026-11-26 02:29:01,097 WARNING WARNING check 08 pricing_sim/experiment_data.py rep=None id=None conditional_censored_demand Positive tail underflows in the public evaluator: The censored demand event has zero probability
+2026-11-26 02:29:01,097 WARNING WARNING check 08 pricing_sim/experiment_data.py rep=None id=None conditional_censored_demand Small positive NB rate loses tail precision and yields a mean below inventory
+2026-11-26 02:29:01,098 WARNING WARNING check 08 pricing_sim/experiment_data.py rep=None id=None conditional_censored_demand Positive tail underflows in the public evaluator: The censored demand event has zero probability
+2026-11-26 02:29:01,098 INFO Begin 09 – version provenance and temporary reproduction
+2026-11-26 02:29:02,333 INFO Completed 09 – version provenance and temporary reproduction
+2026-11-26 02:29:02,814 INFO Largest 100-round censoring deviation: S02 high -0.2680 pp
+2026-11-26 02:29:02,817 WARNING WARNING check 07 train/poisson/S05_L90_H90 rep=None id=None zero_inventory_rate_overall Legal 90% target group has limited inventory/demand information
+2026-11-26 02:29:02,818 WARNING WARNING check 07 train/poisson/S09_L10_H90 rep=None id=None zero_inventory_rate_overall Legal 90% target group has limited inventory/demand information
+2026-11-26 02:29:02,818 WARNING WARNING check 07 train/poisson/S13_L50_H90 rep=None id=None zero_inventory_rate_overall Legal 90% target group has limited inventory/demand information
+2026-11-26 02:29:02,818 WARNING WARNING check 07 train/negative_binomial/S16_L90_H90 rep=None id=None zero_inventory_rate_overall Legal 90% target group has limited inventory/demand information
+2026-11-26 02:29:02,819 WARNING WARNING check 07 train/negative_binomial/S18_L10_H90 rep=None id=None zero_inventory_rate_overall Legal 90% target group has limited inventory/demand information
+2026-11-26 02:29:02,819 INFO Begin 07 – coverage and inventory figures
+2026-11-26 02:29:04,478 INFO Completed 07 – coverage and inventory figures
+2026-11-26 02:29:04,478 INFO Begin pilot – real model fits
+2026-11-26 02:29:04,486 INFO Completed pilot – real model fits
+2026-11-26 02:29:04,486 WARNING WARNING check rsf pricing_sim/survival.py rep=None id=None E[D|D>=Y] (D=1+Poisson(1), Y=2) Discrete censor boundary needs a risk-set and tail review before release
+2026-11-26 02:29:04,486 INFO Confirmed 10/10 pilot cases, 20 fitted methods; RSF WARNING; Censored Poisson NOT TESTED
+2026-11-26 02:29:04,539 INFO Begin double_check – saved counts, recomputed censoring and release IDs
+2026-11-26 02:29:04,566 INFO Completed double_check – saved counts, recomputed censoring and release IDs
+2026-11-26 02:29:04,573 INFO Summary verified: official files=3900, main rows=3800000, physical rows=7800000, hashes=4312/4312, warnings=9, failures=0; dataset=READY, models=PENDING

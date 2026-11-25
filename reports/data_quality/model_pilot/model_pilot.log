@@ -1,0 +1,23 @@
+2026-11-26 02:14:29,904 INFO Real fits for ('S05', 'S16'), rounds 1–5, data=a896f4bd54d582eb3a55c472fc2cba8597b0979bdc2e47cb7f054d78c2355dd3
+2026-11-26 02:14:29,929 INFO S05 round 001 starting
+2026-11-26 02:14:40,505 INFO S05 round 001 passed, 2000 rows, zero-inventory=417, 10.58s
+2026-11-26 02:14:40,506 INFO S16 round 001 starting
+2026-11-26 02:14:50,023 INFO S16 round 001 passed, 2000 rows, zero-inventory=643, 9.52s
+2026-11-26 02:14:50,024 INFO S05 round 002 starting
+2026-11-26 02:15:00,513 INFO S05 round 002 passed, 2000 rows, zero-inventory=400, 10.49s
+2026-11-26 02:15:00,514 INFO S16 round 002 starting
+2026-11-26 02:15:11,529 INFO S16 round 002 passed, 2000 rows, zero-inventory=599, 11.01s
+2026-11-26 02:15:11,534 INFO S05 round 003 starting
+2026-11-26 02:15:21,806 INFO S05 round 003 passed, 2000 rows, zero-inventory=401, 10.27s
+2026-11-26 02:15:21,807 INFO S16 round 003 starting
+2026-11-26 02:15:31,978 INFO S16 round 003 passed, 2000 rows, zero-inventory=605, 10.17s
+2026-11-26 02:15:31,978 INFO S05 round 004 starting
+2026-11-26 02:15:42,438 INFO S05 round 004 passed, 2000 rows, zero-inventory=405, 10.46s
+2026-11-26 02:15:42,439 INFO S16 round 004 starting
+2026-11-26 02:15:52,457 INFO S16 round 004 passed, 2000 rows, zero-inventory=614, 10.02s
+2026-11-26 02:15:52,460 INFO S05 round 005 starting
+2026-11-26 02:16:02,802 INFO S05 round 005 passed, 2000 rows, zero-inventory=403, 10.34s
+2026-11-26 02:16:02,803 INFO S16 round 005 starting
+2026-11-26 02:16:13,726 INFO S16 round 005 passed, 2000 rows, zero-inventory=614, 10.92s
+2026-11-26 02:16:13,730 INFO Boundary probe: current=3.39221119, E[D|D>=Y]=2.58197671
+2026-11-26 02:16:13,731 INFO Finished 10/10 scenario rounds; CP NOT TESTED
